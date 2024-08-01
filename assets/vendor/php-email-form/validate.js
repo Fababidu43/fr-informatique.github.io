@@ -1,4 +1,3 @@
-/*
 (function () {
   "use strict";
 
@@ -52,18 +51,18 @@
     })
       .then(response => {
         if (response.ok) {
-          return response.text();
+          return response.json();  // Modifié pour traiter la réponse JSON
         } else {
           throw new Error(`${response.status} ${response.statusText} ${response.url}`);
         }
       })
       .then(data => {
         thisForm.querySelector('.loading').classList.remove('d-block');
-        if (data.trim() == 'OK') {
+        if (data.ok) {  // Vérifiez la clé "ok" dans la réponse JSON
           thisForm.querySelector('.sent-message').classList.add('d-block');
           thisForm.reset();
         } else {
-          throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action);
+          throw new Error(data ? JSON.stringify(data) : 'Form submission failed and no error message returned from: ' + action);
         }
       })
       .catch((error) => {
@@ -79,4 +78,3 @@
   }
 
 })();
-*/
