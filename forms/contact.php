@@ -44,9 +44,10 @@ $contact->add_message($_POST['name'], 'From');
 $contact->add_message($_POST['email'], 'Email');
 $contact->add_message($_POST['message'], 'Message', 10);
 
-if(!$contact->send()) {
-    error_log('Failed to send email', 3, 'error_log.txt');
+if (!$contact->send()) {
+    error_log('Failed to send email: ' . $contact->error, 3, 'error_log.txt');
+    echo 'Error: ' . $contact->error;
+} else {
+    echo 'OK';
 }
-
-echo $contact->send();
 ?>
