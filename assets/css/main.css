@@ -557,6 +557,14 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 
+.services-section {
+  background-image: url('assets/img/fond-section.jpg');
+  background-size: cover; /* Pour couvrir toute la section */
+  background-position: center; /* Pour centrer l'image */
+  background-repeat: no-repeat; /* Pour ne pas répéter l'image */
+  padding: 50px 0; /* Ajuster le padding si nécessaire */
+}
+
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
