@@ -557,12 +557,8 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 
-.service-section {
-    background-image: url('assets/img/fond-section.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px;
+.services section {
+    background-image: url('assets/img/fond-section.jpg');
 }
 
 .services .service-item {
