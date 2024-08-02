@@ -557,10 +557,6 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 
-.services section {
-    background-image: url('assets/img/fond-section.jpg');
-}
-
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
