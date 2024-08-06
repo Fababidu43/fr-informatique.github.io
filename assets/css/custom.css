@@ -1,0 +1,181 @@
+@media (min-width: 768px) {
+    .col-md-6 {
+      flex: 0 0 auto;
+      width: 33.3333%; /* Change la largeur à 33.3333% */
+    }
+  }
+
+  /* Surcharge des durées de transition */
+[data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
+    transition-duration: 25ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="100"], body[data-aos-duration="100"] [data-aos] {
+    transition-duration: 50ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="150"], body[data-aos-duration="150"] [data-aos] {
+    transition-duration: 75ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="200"], body[data-aos-duration="200"] [data-aos] {
+    transition-duration: 100ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="250"], body[data-aos-duration="250"] [data-aos] {
+    transition-duration: 125ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="300"], body[data-aos-duration="300"] [data-aos] {
+    transition-duration: 150ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="350"], body[data-aos-duration="350"] [data-aos] {
+    transition-duration: 175ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="400"], body[data-aos-duration="400"] [data-aos] {
+    transition-duration: 200ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="450"], body[data-aos-duration="450"] [data-aos] {
+    transition-duration: 225ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="500"], body[data-aos-duration="500"] [data-aos] {
+    transition-duration: 250ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="550"], body[data-aos-duration="550"] [data-aos] {
+    transition-duration: 275ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="600"], body[data-aos-duration="600"] [data-aos] {
+    transition-duration: 300ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="650"], body[data-aos-duration="650"] [data-aos] {
+    transition-duration: 325ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="700"], body[data-aos-duration="700"] [data-aos] {
+    transition-duration: 350ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="750"], body[data-aos-duration="750"] [data-aos] {
+    transition-duration: 375ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="800"], body[data-aos-duration="800"] [data-aos] {
+    transition-duration: 400ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="850"], body[data-aos-duration="850"] [data-aos] {
+    transition-duration: 425ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="900"], body[data-aos-duration="900"] [data-aos] {
+    transition-duration: 450ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="950"], body[data-aos-duration="950"] [data-aos] {
+    transition-duration: 475ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos] {
+    transition-duration: 500ms !important;
+  }
+  
+  /* Surcharge des délais de transition */
+  [data-aos][data-aos][data-aos-delay="50"], body[data-aos-delay="50"] [data-aos] {
+    transition-delay: 25ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="100"], body[data-aos-delay="100"] [data-aos] {
+    transition-delay: 50ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="150"], body[data-aos-delay="150"] [data-aos] {
+    transition-delay: 75ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="200"], body[data-aos-delay="200"] [data-aos] {
+    transition-delay: 100ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="250"], body[data-aos-delay="250"] [data-aos] {
+    transition-delay: 125ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="300"], body[data-aos-delay="300"] [data-aos] {
+    transition-delay: 150ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="350"], body[data-aos-delay="350"] [data-aos] {
+    transition-delay: 175ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="400"], body[data-aos-delay="400"] [data-aos] {
+    transition-delay: 200ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="450"], body[data-aos-delay="450"] [data-aos] {
+    transition-delay: 225ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="500"], body[data-aos-delay="500"] [data-aos] {
+    transition-delay: 250ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="550"], body[data-aos-delay="550"] [data-aos] {
+    transition-delay: 275ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="600"], body[data-aos-delay="600"] [data-aos] {
+    transition-delay: 300ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="650"], body[data-aos-delay="650"] [data-aos] {
+    transition-delay: 325ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="700"], body[data-aos-delay="700"] [data-aos] {
+    transition-delay: 350ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="750"], body[data-aos-delay="750"] [data-aos] {
+    transition-delay: 375ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="800"], body[data-aos-delay="800"] [data-aos] {
+    transition-delay: 400ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="850"], body[data-aos-delay="850"] [data-aos] {
+    transition-delay: 425ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="900"], body[data-aos-delay="900"] [data-aos] {
+    transition-delay: 450ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="950"], body[data-aos-delay="950"] [data-aos] {
+    transition-delay: 475ms !important;
+  }
+  
+  [data-aos][data-aos][data-aos-delay="1000"], body[data-aos-delay="1000"] [data-aos] {
+    transition-delay: 500ms !important;
+  }
+  
+  /* Spécifiquement pour les appareils mobiles */
+  @media (max-width: 768px) {
+    [data-aos][data-aos][data-aos-duration], body [data-aos][data-aos-duration] {
+      transition-duration: 200ms !important; /* Durée plus courte pour les mobiles */
+    }
+  
+    [data-aos][data-aos][data-aos-delay], body [data-aos][data-aos-delay] {
+      transition-delay: 50ms !important; /* Délais plus courts pour les mobiles */
+    }
+  }
+  
+  

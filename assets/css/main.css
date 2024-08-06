@@ -173,6 +173,12 @@ h6 {
     margin-left: -160px;
     width: 100vw;
   }
+  .header~main .services {
+    margin-left: -160px;
+  }
+  .header~main .contact {
+    margin-left: -160px;
+  }
 }
 
 .header.header-show {
@@ -575,6 +581,7 @@ section,
   object-fit: cover;
   object-position: center;
   opacity: 0.3; /* Ajustez l'opacité si nécessaire */
+  width: 100vw;
 }
 
 .services .container {
@@ -588,32 +595,39 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 
+.services {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .services .service-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  min-height: 300px; /* Hauteur minimale pour les items, ajustez selon vos besoins */
   background-color: var(--surface-color);
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  height: 100%;
   padding: 60px 30px;
   text-align: center;
   transition: 0.3s;
   border-radius: 5px;
+  margin-bottom: 1.5rem; /* Espace vertical entre les items */
 }
 
 .services .service-item .icon {
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   width: 100px;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: ease-in-out 0.3s;
-  position: relative;
 }
 
 .services .service-item .icon i {
   font-size: 36px;
   transition: 0.5s;
-  position: relative;
 }
 
 .services .service-item .icon svg {
@@ -637,6 +651,18 @@ section,
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .services .service-item {
+    flex: 1 1 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .services .service-item {
+    flex: 1 1 calc(50% - 1.5rem);
+  }
 }
 
 .services .service-item:hover {
