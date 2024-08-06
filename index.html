@@ -54,191 +54,190 @@
     <link rel="stylesheet" href="assets\css\custom.css">
 
     <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-          "@context": "http://schema.org",
-          "@type": "LocalBusiness",
-          "name": "FR Informatique",
-          "description": "FR Informatique fournit des solutions informatiques simples et efficaces pour tous vos besoins informatiques.",
-          "url": "https://fr-informatique.com",
-          "logo": "https://fr-informatique.com/assets/img/apple-touch-icon.png",
-          "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+33 6 30 70 30 36",
-              "contactType": "Service clientèle",
-              "areaServed": "FR"
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "FR Informatique",
+      "description": "FR Informatique fournit des solutions informatiques simples et efficaces pour tous vos besoins informatiques.",
+      "url": "https://fr-informatique.com",
+      "logo": "https://fr-informatique.com/assets/img/apple-touch-icon.png",
+      "image": "https://fr-informatique.com/assets/img/hero-bg.jpg",
+      "telephone": "+33 6 30 70 30 36",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chemin du vent",
+        "addressLocality": "Beauzac",
+        "addressRegion": "Haute-Loire",
+        "postalCode": "43390",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "45.2516",
+        "longitude": "4.0807"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Zone de 25 km autour de Beauzac",
+        "geo": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.2516,
+            "longitude": 4.0807
           },
-          "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Chemin du vent",
-              "addressLocality": "Beauzac",
-              "addressRegion": "Haute-Loire",
-              "postalCode": "43390",
-              "addressCountry": "FR"
-          },
-          "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "45.2516",
-              "longitude": "4.0807"
-          },
+          "geoRadius": 25000
+        }
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/votrepage",
+        "https://twitter.com/votrecompte",
+        "https://www.linkedin.com/in/votreprofil",
+        "https://www.instagram.com/votrecompte"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "25"
+      },
+      "serviceOffered": [
+        {
+          "@type": "Service",
+          "name": "Dépannage Informatique",
+          "description": "Nous résolvons tous vos problèmes informatiques rapidement et efficacement à Beauzac et ses environs.",
           "areaServed": {
-              "@type": "Place",
-              "name": "Zone de 25 km autour de Beauzac",
-              "geo": {
-                  "@type": "GeoCircle",
-                  "geoMidpoint": {
-                      "@type": "GeoCoordinates",
-                      "latitude": 45.2516,
-                      "longitude": 4.0807
-                  },
-                  "geoRadius": 25000
-              }
-          },
-          "openingHoursSpecification": [
-              {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                      "Sunday"
-                  ],
-                  "opens": "08:00",
-                  "closes": "20:00"
-              }
-          ],
-          "sameAs": [
-              "https://www.facebook.com/votrepage"
-          ],
-          "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "25"
-          },
-          "serviceOffered": [
-              {
-                  "@type": "Service",
-                  "name": "Dépannage Informatique",
-                  "description": "Nous résolvons tous vos problèmes informatiques rapidement et efficacement à Beauzac et ses environs.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Récupération de Données",
-                  "description": "Nous récupérons vos données perdues ou effacées accidentellement.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Remise à Zéro",
-                  "description": "Nous remettons votre ordinateur à neuf, tout en sauvegardant vos données importantes.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Formation Office",
-                  "description": "Nous vous apprenons à utiliser les outils Office comme Excel, Word, et PowerPoint.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Montage PC",
-                  "description": "Nous montons votre PC sur mesure, selon vos besoins et votre budget.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Recherche Composants",
-                  "description": "Nous vous aidons à trouver les meilleurs composants pour votre PC.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Maintenance Préventive",
-                  "description": "Nous effectuons la maintenance préventive de vos systèmes pour éviter les pannes.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Consultation",
-                  "description": "Nous offrons des consultations pour vous aider à optimiser vos systèmes informatiques.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Sauvegardes",
-                  "description": "Nous créons des sauvegardes régulières de vos données pour les protéger.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Recyclage",
-                  "description": "Nous recyclons et reconditionnons vos anciens équipements informatiques.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Formation Personnalisée",
-                  "description": "Nous offrons des formations personnalisées pour vous aider à maîtriser l'informatique.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Sites Internet",
-                  "description": "Nous développons des sites internet adaptés à vos besoins.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              },
-              {
-                  "@type": "Service",
-                  "name": "Applications",
-                  "description": "Nous créons des applications sur mesure pour répondre à vos besoins spécifiques.",
-                  "areaServed": {
-                      "@type": "Place",
-                      "name": "Zone de 25 km autour de Beauzac"
-                  }
-              }
-          ]
-      }
-      </script>      
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Récupération de Données",
+          "description": "Nous récupérons vos données perdues ou effacées accidentellement.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Remise à Zéro",
+          "description": "Nous remettons votre ordinateur à neuf, tout en sauvegardant vos données importantes.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Formation Office",
+          "description": "Nous vous apprenons à utiliser les outils Office comme Excel, Word, et PowerPoint.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Montage PC",
+          "description": "Nous montons votre PC sur mesure, selon vos besoins et votre budget.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Recherche Composants",
+          "description": "Nous vous aidons à trouver les meilleurs composants pour votre PC.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Maintenance Préventive",
+          "description": "Nous effectuons la maintenance préventive de vos systèmes pour éviter les pannes.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Consultation",
+          "description": "Nous offrons des consultations pour vous aider à optimiser vos systèmes informatiques.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Sauvegardes",
+          "description": "Nous créons des sauvegardes régulières de vos données pour les protéger.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Recyclage",
+          "description": "Nous recyclons et reconditionnons vos anciens équipements informatiques.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Formation Personnalisée",
+          "description": "Nous offrons des formations personnalisées pour vous aider à maîtriser l'informatique.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Sites Internet",
+          "description": "Nous développons des sites internet adaptés à vos besoins.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Applications",
+          "description": "Nous créons des applications sur mesure pour répondre à vos besoins spécifiques.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Zone de 25 km autour de Beauzac"
+          }
+        }
+      ]
+    }
+    </script>      
 </head>
 
 <body class="index-page">
