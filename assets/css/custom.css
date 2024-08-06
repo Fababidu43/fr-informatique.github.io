@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
     .col-md-6 {
       flex: 0 0 auto;
-      width: 33.3333%; /* Change la largeur à 33.3333% */
+      width: 33.3333%; /* Change la largeur à 33.3333% */ 
     }
   }
 
