@@ -250,7 +250,11 @@
 
   <main class="main">
     <section id="hero" class="hero section light-background">
-      <img src="assets/img/hero-bg.webp" alt="FR Informatique Hero Image" width="1920" height="1280">    
+      <picture>
+        <source srcset="assets/img/hero-bg-mobile.webp" media="(max-width: 768px)">
+        <source srcset="assets/img/hero-bg.webp">
+        <img src="assets/img/hero-bg.webp" alt="FR Informatique Hero Image" width="1920" height="1280" loading="lazy">
+      </picture>          
       <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
           <div class="col-lg-9">
@@ -266,7 +270,11 @@
     <!-- Services Section -->
     <section id="services" class="services section">
       <div class="background-image-container">
-        <img src="assets/img/fond-section.webp" alt="Background Image">
+        <picture>
+          <source srcset="assets/img/fond-section-mobile.webp" media="(max-width: 768px)">
+          <source srcset="assets/img/fond-section.webp">
+          <img src="assets/img/fond-section.webp" alt="Background Image" loading="lazy">
+        </picture>        
       </div>
       <div class="container section-title" data-aos="fade-up">
         <h2>Nos Services</h2>
@@ -276,7 +284,7 @@
       <div class="container">
         <div class="row gy-4">
 
-          <div class="col-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" loading="lazy">
             <div class="service-item item-cyan position-relative">
               <div class="icon">
                 <i class="bi bi-activity"></i>
@@ -440,7 +448,11 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
       <div class="background-image-container">
-        <img src="assets/img/fond-contact.webp" alt="Background Image">
+        <picture>
+          <source srcset="assets/img/fond-contact-mobile.webp" media="(max-width: 768px)">
+          <source srcset="assets/img/fond-contact.webp">
+          <img src="assets/img/fond-contact.webp" alt="Background Image" loading="lazy">
+        </picture>        
       </div>
 
       <!-- Section Title -->
