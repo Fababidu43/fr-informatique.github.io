@@ -422,14 +422,17 @@ h6 {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
 
 .background-image-container img {
-  width: 1280px;
-  height: 720px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
+
 
 
 section,
