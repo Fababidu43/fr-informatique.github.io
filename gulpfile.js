@@ -1,29 +1,46 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const cssnano = require('gulp-cssnano');
+const { src, dest, series, parallel } = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
 
-// Tâche pour combiner et minifier CSS
-gulp.task('css', function() {
-  return gulp.src(['assets/vendor/bootstrap/css/bootstrap.min.css', 'assets/css/main.css'])
-    .pipe(concat('combined.min.css'))
-    .pipe(cssnano())
-    .pipe(gulp.dest('assets/css'));
-});
+function minifyHTML() {
+  return src('index.html')
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+    .pipe(dest('dist'));
+}
 
-// Tâche pour combiner et minifier JS
-gulp.task('js', function() {
-  return gulp.src(['assets/vendor/bootstrap/js/bootstrap.bundle.min.js', 'assets/js/main.js'])
-    .pipe(concat('combined.min.js'))
+function minifyCSS() {
+  return src('assets/css/**/*.css')
+    .pipe(concat('styles.min.css'))
+    .pipe(cleanCSS())
+    .pipe(dest('dist/assets/css'));
+}
+
+function minifyJS() {
+  return src('assets/js/**/*.js')
+    .pipe(concat('scripts.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js'));
-});
+    .pipe(dest('dist/assets/js'));
+}
 
-// Tâche pour surveiller les changements
-gulp.task('watch', function() {
-  gulp.watch('assets/css/*.css', gulp.series('css'));
-  gulp.watch('assets/js/*.js', gulp.series('js'));
-});
+function optimizeImages() {
+  return src('assets/img/**/*')
+    .pipe(imagemin())
+    .pipe(dest('dist/assets/img'));
+}
 
-// Tâche par défaut
-gulp.task('default', gulp.series('css', 'js'));
+function copyOtherAssets() {
+  return src(['assets/vendor/**/*'], { base: 'assets' })
+    .pipe(dest('dist/assets'));
+}
+
+function copyStatic() {
+  return src(['forms/**/*', 'robots.txt', 'sitemap.xml', 'CNAME'], { base: './' })
+    .pipe(dest('dist'));
+}
+
+exports.default = series(
+  parallel(minifyHTML, minifyCSS, minifyJS, optimizeImages, copyOtherAssets, copyStatic)
+);

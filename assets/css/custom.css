@@ -177,5 +177,212 @@
       transition-delay: 50ms !important; /* Délais plus courts pour les mobiles */
     }
   }
-  
-  
+  /*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about .content h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.about .content ul strong {
+  margin-right: 10px;
+}
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: var(--accent-color);
+  line-height: 0;
+}
+
+/*--------------------------------------------------------------
+# Skills Section (fix barre de progression)
+--------------------------------------------------------------*/
+.skills .progress {
+  /* Rétablir le comportement d’enveloppe plein */
+  display: block;
+  height: 60px;
+  background: none;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.skills .skill {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--heading-color);
+  margin-bottom: 6px;
+}
+
+.skills .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  /* largeur plein pour que la barre interne puisse se dimensionner */
+  width: 100%;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  height: 10px;
+}
+
+.skills .progress-bar {
+  /* pas de width ici : on utilise l’inline style en HTML */
+  height: 10px;
+  transition: width 0.9s ease;
+  background-color: var(--accent-color); /* #0563bb :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1} */
+}
+
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--accent-color);
+  position: relative;
+}
+.resume .resume-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 10px;
+}
+.resume .resume-item h5 {
+  font-size: 16px;
+  display: inline-block;
+  padding: 5px 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: -9px;
+  top: 0;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+
+.service-item .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.service-item .icon svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.service-item .icon i {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.service-item {
+    cursor: pointer;
+}
+
+/* Transition fluide des modals */
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navmenu a .navicon + span {
+  white-space: nowrap;
+}
+
+.navmenu a .navicon {
+  flex-shrink: 0;
+}
+
+.navmenu a {
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+.navmenu a .navicon svg {
+  display: none !important;
+}
+
+/* Dégradé du gris #b3b3b2 vers #cccaca pour À propos */
+#about {
+  background: linear-gradient(135deg, #b3b3b2 0%, #cccaca 100%) !important;
+}
+
+/* Dégradé du #cccaca vers #dddcdc pour Compétences */
+#skills {
+  background: linear-gradient(135deg, #cccaca 0%, #dddcdc 100%) !important;
+}
+
+/* Dégradé du #dddcdc vers #eeecf0 pour Réalisations */
+#realisations {
+  background: linear-gradient(135deg, #dddcdc 0%, #eeecf0 100%) !important;
+}
+
+/* Dégradé final léger sur #eeecf0 pour Services */
+#services {
+  background: linear-gradient(135deg, #eeecf0 0%, #ffffff 100%) !important;
+}
+
+body {
+  background: linear-gradient(to bottom, #b3b3b2 0%, #cccaca 25%, #dddcdc 50%, #eeecf0 75%, #ffffff 100%) !important;
+}
+
+#about,
+#skills,
+#realisations,
+#services {
+  background: transparent !important;
+}
+
+.section-divider {
+  width: 80%;
+  height: 1px;
+  margin: 0 auto;
+  background: color-mix(in srgb, var(--default-color), transparent 80%);
+  opacity: 0.5;
+}
+

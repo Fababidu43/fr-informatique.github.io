@@ -251,15 +251,15 @@ h6 {
 }
 
 @media (min-width: 992px) {
-
   .navmenu a,
   .navmenu a:focus {
-    max-width: 56px;
+    max-width: 100% !important;
+    transition: none !important; /* SUPPRESSION DE LA TRANSITION */
   }
 
   .navmenu a span,
   .navmenu a:focus span {
-    display: none;
+    display: inline-block !important;
   }
 }
 
@@ -569,274 +569,75 @@ section,
   }
 }
 
-/* Services Section */
-.services {
-  position: relative;
-  padding: 60px 0;
-}
-
-.services .background-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.services .background-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0.3; /* Ajustez l'opacité si nécessaire */
-  width: 100vw;
-}
-
-.services .container {
-  position: relative;
-  z-index: 2;
-}
-
-
+/* main.css */
 
 /*--------------------------------------------------------------
-# Services Section
+# Modals : style épuré
 --------------------------------------------------------------*/
-
-.services {
-  display: flex;
-  flex-wrap: wrap;
+.modal-content.service-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
 }
-
-.services .service-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-  min-height: 300px; /* Hauteur minimale pour les items, ajustez selon vos besoins */
-  background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 60px 30px;
-  text-align: center;
-  transition: 0.3s;
-  border-radius: 5px;
-  margin-bottom: 1.5rem; /* Espace vertical entre les items */
+.modal-header {
+  background: var(--accent-color);
+  border: none;
+  color: var(--contrast-color);
+  justify-content: center;
+  padding: 1rem;
 }
-
-.services .service-item .icon {
-  margin: 0 auto 20px auto;
-  width: 100px;
-  height: 100px;
+.modal-header .btn-close {
+  filter: brightness(0.8);
+  margin-top: -0.5rem;
+}
+.modal-title {
+  font-family: var(--heading-font);
+  font-size: 1.75rem;
+}
+.modal-body {
+  padding: 1.5rem 2rem;
+}
+.modal .service-icon-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ease-in-out 0.3s;
+  margin-bottom: 1rem;
+}
+.modal .service-icon-title .icon {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+.modal .service-icon-title h3 {
+  font-size: 1.75rem;
+  margin: 0;
+  color: var(--heading-color);
+}
+.modal .description-box {
+  background: var(--background-color);
+  border-left: 4px solid var(--accent-color);
+  padding: 1rem 1.25rem;
+}
+.modal .description-box ul {
+  padding-left: 1.5rem;
+}
+.modal .description-box li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: var(--default-color);
 }
 
-.services .service-item .icon i {
-  font-size: 36px;
-  transition: 0.5s;
-}
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
 
-.services .service-item .icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.services .service-item .icon svg path {
-  transition: 0.5s;
-  fill: color-mix(in srgb, var(--default-color), transparent 95%);
-}
-
-.services .service-item h3 {
-  font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-}
-
-.services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .services .service-item {
-    flex: 1 1 100%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .services .service-item {
-    flex: 1 1 calc(50% - 1.5rem);
-  }
-}
-
-.services .service-item:hover {
-  box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
-}
-
-.services .service-item.item-cyan i {
-  color: #0dcaf0;
-}
-
-.services .service-item.item-cyan:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-cyan:hover .icon path {
-  fill: #0dcaf0;
-}
-
-.services .service-item.item-orange i {
-  color: #fd7e14;
-}
-
-.services .service-item.item-orange:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-orange:hover .icon path {
-  fill: #fd7e14;
-}
-
-.services .service-item.item-teal i {
-  color: #20c997;
-}
-
-.services .service-item.item-teal:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-teal:hover .icon path {
-  fill: #20c997;
-}
-
-.services .service-item.item-red i {
-  color: #df1529;
-}
-
-.services .service-item.item-red:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-red:hover .icon path {
-  fill: #df1529;
-}
-
-.services .service-item.item-indigo i {
-  color: #6610f2;
-}
-
-.services .service-item.item-indigo:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-indigo:hover .icon path {
-  fill: #6610f2;
-}
-
-.services .service-item.item-pink i {
-  color: #f3268c;
-}
-
-.services .service-item.item-pink:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-pink:hover .icon path {
-  fill: #f3268c;
-}
-
-/* Add the hover effects for the remaining service items */
-.services .service-item.item-purple i {
-  color: #6f42c1;
-}
-
-.services .service-item.item-purple:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-purple:hover .icon path {
-  fill: #6f42c1;
-}
-
-.services .service-item.item-yellow i {
-  color: #ffc107;
-}
-
-.services .service-item.item-yellow:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-yellow:hover .icon path {
-  fill: #ffc107;
-}
-
-.services .service-item.item-green i {
-  color: #198754;
-}
-
-.services .service-item.item-green:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-green:hover .icon path {
-  fill: #198754;
-}
-
-.services .service-item.item-blue i {
-  color: #0d6efd;
-}
-
-.services .service-item.item-blue:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-blue:hover .icon path {
-  fill: #0d6efd;
-}
-
-.services .service-item.item-brown i {
-  color: #795548;
-}
-
-.services .service-item.item-brown:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-brown:hover .icon path {
-  fill: #795548;
-}
-
-.services .service-item.item-gray i {
-  color: #6c757d;
-}
-
-.services .service-item.item-gray:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-gray:hover .icon path {
-  fill: #6c757d;
-}
-
-.services .service-item.item-black i {
-  color: #343a40;
-}
-
-.services .service-item.item-black:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-black:hover .icon path {
-  fill: #343a40;
-}
-
-/* Services Section */
 .contact {
   position: relative;
   padding: 60px 0;
@@ -864,11 +665,6 @@ section,
   position: relative;
   z-index: 2;
 }
-
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
 
 
 .contact .info-item+.info-item {
@@ -991,62 +787,133 @@ section,
   }
 }
 
-/* Styles pour les items de service dans le modal */
-.modal-content.service-item {
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .service-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
-  padding: 40px;
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 60px 30px;
   text-align: center;
+  transition: 0.3s;
   border-radius: 5px;
-  margin: 0 auto; /* Center the modal content */
-  max-width: 900px; /* Adjust the max width to make the modal wider */
 }
 
-.modal .service-icon-title {
+.services .service-item .icon {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  transition: ease-in-out 0.3s;
+  position: relative;
 }
 
-.modal .service-icon-title .icon {
-  margin-right: 15px;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.services .service-item .icon i {
+  font-size: 36px;
+  transition: 0.5s;
+  position: relative;
 }
 
-.modal .service-icon-title .icon i {
-  font-size: 48px;
+.services .service-item .icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.services .service-item .icon svg path {
+  transition: 0.5s;
+  fill: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.services .service-item h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .service-item:hover {
+  box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
+}
+
+.services .service-item.item-cyan i {
   color: #0dcaf0;
 }
 
-.modal .service-icon-title h3 {
-  font-size: 32px;
-  margin: 0;
+.services .service-item.item-cyan:hover .icon i {
+  color: #fff;
 }
 
-.modal .description-box {
-  padding: 20px;
-  background-color: #f7f7f7; /* Slightly different background color */
-  border-radius: 5px;
-  text-align: left;
+.services .service-item.item-cyan:hover .icon path {
+  fill: #0dcaf0;
 }
 
-.modal .description-box p,
-.modal .description-box ul {
-  font-size: 18px; /* Increased font size */
-  margin-bottom: 15px;
-  color: #333;
+.services .service-item.item-orange i {
+  color: #fd7e14;
 }
 
-.modal .description-box ul {
-  padding-left: 25px;
+.services .service-item.item-orange:hover .icon i {
+  color: #fff;
 }
 
-.modal .description-box ul li {
-  margin-bottom: 15px;
+.services .service-item.item-orange:hover .icon path {
+  fill: #fd7e14;
 }
+
+.services .service-item.item-teal i {
+  color: #20c997;
+}
+
+.services .service-item.item-teal:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-teal:hover .icon path {
+  fill: #20c997;
+}
+
+.services .service-item.item-red i {
+  color: #df1529;
+}
+
+.services .service-item.item-red:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-red:hover .icon path {
+  fill: #df1529;
+}
+
+.services .service-item.item-indigo i {
+  color: #6610f2;
+}
+
+.services .service-item.item-indigo:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-indigo:hover .icon path {
+  fill: #6610f2;
+}
+
+.services .service-item.item-pink i {
+  color: #f3268c;
+}
+
+.services .service-item.item-pink:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item.item-pink:hover .icon path {
+  fill: #f3268c;
+}
+
 

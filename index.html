@@ -239,13 +239,16 @@
 
   <header id="header" class="header d-flex flex-column justify-content-center">
     <i class="header-toggle d-xl-none bi bi-list"></i>
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Accueil</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
+<nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Accueil</span></a></li>
+    <li><a href="#about"><i class="bi bi-person navicon"></i><span>À propos</span></a></li>
+    <li><a href="#skills"><i class="bi bi-bar-chart-line navicon"></i><span>Compétences</span></a></li>
+    <li><a href="#realisations"><i class="bi bi-lightbulb navicon"></i><span>Réalisations</span></a></li>
+    <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+    <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+  </ul>
+</nav>
   </header>
 
   <main class="main">
@@ -260,190 +263,537 @@
           <div class="col-lg-9">
             <h1>FR Informatique</h1>
             <p>Des solutions informatiques simples et efficaces pour tous à Beauzac et ses environs</p>
-            <button id="showPhoneNumber">Afficher le numéro de téléphone</button>
-            <div id="phoneNumber" class="phoneNumber">+33 6 30 70 30 36</div>
+            <p>Je suis <span class="typed" data-typed-items="Développeur, Informaticien, Conseiller Informatique, Concepteur de logiciels"></span></p>
+            <button id="showPhoneNumber" class="btn btn-primary" aria-label="Afficher le numéro de téléphone de FR Informatique">Afficher le numéro de téléphone</button>
+            <div id="phoneNumber" class="phoneNumber" aria-live="polite">+33 6 30 70 30 36</div>
           </div>
         </div>
       </div>
     </section>    
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
-      <div class="background-image-container">
-        <picture>
-          <source srcset="assets/img/fond-section-mobile.webp" media="(max-width: 768px)">
-          <source srcset="assets/img/fond-section.webp">
-          <img src="assets/img/fond-section.webp" alt="Background Image" loading="lazy">
-        </picture>        
+<!-- About Section -->
+<section id="about" class="about section">
+  <!-- Mini-titre -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>À propos</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 justify-content-center">
+      <!-- Portrait -->
+      <div class="col-lg-4">
+        <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Portrait de Fabian Measson">
       </div>
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Nos Services</h2>
-        <p>Nous offrons une large gamme de services pour répondre à tous vos besoins informatiques à Beauzac et ses environs.</p>
-      </div><!-- End Section Title -->
+      <!-- Texte et infos -->
+      <div class="col-lg-8 content">
+        <!-- Vos paragraphes -->
+        <p>
+          Data Master, Web Développeur informaticien et Technicien en dépannage informatique, diplômé d’une licence en développement web. J’accompagne les professionnels dans l’automatisation de leurs process, la connexion de leurs outils et la résolution de pannes, en présentiel ou à distance.
+        </p>
+        <p>
+          Passionné de jeux vidéo, de sport, de mangas et de cinéma, j’apporte ma curiosité et ma créativité au service de solutions techniques robustes.
+        </p>
 
-      <div class="container">
-        <div class="row gy-4">
-
-          <div class="col-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" loading="lazy">
-            <div class="service-item item-cyan position-relative">
-              <div class="icon">
-                <i class="bi bi-activity"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal1">
-                <h3>Dépannage Informatique</h3>
-              </a>
-              <p>Nous résolvons tous vos problèmes informatiques rapidement et efficacement.</p>
-            </div>
+        <!-- Vos infos détaillées -->
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Birthday :</strong> <span>15 April 1999</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Website :</strong> <span><a href="https://fr-informatique.com/" target="_blank">fr-informatique.com</a></span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Phone :</strong> <span>06 30 70 30 36</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>City :</strong> <span>Beauzac, France</span></li>
+            </ul>
           </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item item-orange position-relative">
-              <div class="icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal2">
-                <h3>Récupération de Données</h3>
-              </a>
-              <p>Nous récupérons vos données perdues ou effacées accidentellement.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item item-teal position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal3">
-                <h3>Remise à Zéro</h3>
-              </a>
-              <p>Nous remettons votre ordinateur à neuf, tout en sauvegardant vos données importantes.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item item-red position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal4">
-                <h3>Formation Office</h3>
-              </a>
-              <p>Nous vous apprenons à utiliser les outils Office comme Excel, Word, et PowerPoint.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item item-indigo position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal5">
-                <h3>Montage PC</h3>
-              </a>
-              <p>Nous montons votre PC sur mesure, selon vos besoins et votre budget.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item item-pink position-relative">
-              <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal6">
-                <h3>Recherche Composants</h3>
-              </a>
-              <p>Nous vous aidons à trouver les meilleurs composants pour votre PC.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="service-item item-purple position-relative">
-              <div class="icon">
-                <i class="bi bi-wrench"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal7">
-                <h3>Maintenance Préventive</h3>
-              </a>
-              <p>Nous effectuons la maintenance préventive de vos systèmes pour éviter les pannes.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
-            <div class="service-item item-yellow position-relative">
-              <div class="icon">
-                <i class="bi bi-lightbulb"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal8">
-                <h3>Consultation</h3>
-              </a>
-              <p>Nous offrons des consultations pour vous aider à optimiser vos systèmes informatiques.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
-            <div class="service-item item-green position-relative">
-              <div class="icon">
-                <i class="bi bi-shield-check"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal9">
-                <h3>Sauvegardes</h3>
-              </a>
-              <p>Nous créons des sauvegardes régulières de vos données pour les protéger.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1000">
-            <div class="service-item item-blue position-relative">
-              <div class="icon">
-                <i class="bi bi-recycle"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal10">
-                <h3>Recyclage</h3>
-              </a>
-              <p>Nous recyclons et reconditionnons vos anciens équipements informatiques.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1100">
-            <div class="service-item item-brown position-relative">
-              <div class="icon">
-                <i class="bi bi-person-check"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal11">
-                <h3>Formation Personnalisée</h3>
-              </a>
-              <p>Nous offrons des formations personnalisées pour vous aider à maîtriser l'informatique.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1200">
-            <div class="service-item item-gray position-relative">
-              <div class="icon">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal12">
-                <h3>Sites Internet</h3>
-              </a>
-              <p>Nous développons des sites internet adaptés à vos besoins.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1300">
-            <div class="service-item item-black position-relative">
-              <div class="icon">
-                <i class="bi bi-laptop"></i>
-              </div>
-              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#serviceModal13">
-                <h3>Applications</h3>
-              </a>
-              <p>Nous créons des applications sur mesure pour répondre à vos besoins spécifiques.</p>
-            </div>
-          </div><!-- End Service Item -->
-
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Age :</strong> <span>26</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Degree :</strong> <span>Licence Développement Web</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Email :</strong> <span>fabian.measson.pro@gmail.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Freelance :</strong> <span>Disponible sur <a href="https://www.malt.fr/profile/fabianmeasson" target="_blank">MALT</a></span></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section><!-- /Services Section -->
+    </div>
+  </div>
+</section>
+<!-- End About Section -->
+
+<div class="section-divider"></div>
+
+<!-- Skills Section -->
+<section id="skills" class="skills section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills</h2>
+    <p>Voici un aperçu de mes compétences techniques clés.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row skills-content skills-animation">
+      <div class="col-lg-6">
+        <!-- Python 100% -->
+        <div class="progress">
+          <span class="skill"><span>Python</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="100"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 style="width: 100%;"></div>
+          </div>
+        </div>
+        <!-- JavaScript 100% -->
+        <div class="progress">
+          <span class="skill"><span>JavaScript</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="100"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 style="width: 100%;"></div>
+          </div>
+        </div>
+        <!-- HTML 100% -->
+        <div class="progress">
+          <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="100"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 style="width: 100%;"></div>
+          </div>
+        </div>
+        <!-- CSS 100% -->
+        <div class="progress">
+          <span class="skill"><span>CSS</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="100"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 style="width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <!-- PHP 90% -->
+        <div class="progress">
+          <span class="skill"><span>PHP</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="90"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 style="width: 90%;"></div>
+          </div>
+        </div>
+        <!-- SQL 100% -->
+        <div class="progress">
+          <span class="skill"><span>SQL</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="100"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 style="width: 100%;"></div>
+          </div>
+        </div>
+        <!-- IA 90% -->
+        <div class="progress">
+          <span class="skill"><span>Intelligence Artificielle</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="90"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 style="width: 90%;"></div>
+          </div>
+        </div>
+        <!-- Excel 100% -->
+        <div class="progress">
+          <span class="skill"><span>Excel</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="100"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 style="width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Skills Section -->
+
+<div class="section-divider"></div>
+
+<!-- Réalisations possibles Section -->
+<section id="realisations" class="resume section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Réalisations possibles</h2>
+    <p>Mon objectif : vous faire gagner du temps, de l’efficacité et de la simplicité.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      
+      <!-- Dépannage informatique -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="resume-item">
+          <h4>Dépannage informatique</h4>
+          <ul>
+            <li>Diagnostic complet de votre matériel (PC, imprimantes, serveurs)</li>
+            <li>Réparation ou remplacement de composants défectueux</li>
+            <li>Intervention rapide sur site ou assistance à distance</li>
+            <li>Optimisation des performances et sauvegarde de vos données</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Connexion & intégration d’outils -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="resume-item">
+          <h4>Connexion &amp; intégration d’outils</h4>
+          <ul>
+            <li>Liaison de votre logiciel métier à Excel ou Google Sheets</li>
+            <li>Synchronisation automatique de vos bases de données</li>
+            <li>Création de tableaux de bord clairs et personnalisés</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Automatisation de tâches -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="resume-item">
+          <h4>Automatisation de tâches</h4>
+          <ul>
+            <li>Génération automatique de rapports PDF/CSV</li>
+            <li>Envoi programmé d’e-mails et de notifications</li>
+            <li>Scripts sur-mesure pour éliminer les actions répétitives</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Solutions Intelligence Artificielle -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="resume-item">
+          <h4>Solutions basées sur l’Intelligence Artificielle</h4>
+          <ul>
+            <li>Génération de descriptions produits par IA</li>
+            <li>Analyse prédictive pour optimiser vos stocks</li>
+            <li>Assistant virtuel pour la gestion des demandes clients</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Développement d’outils personnalisés -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="resume-item">
+          <h4>Développement d’outils personnalisés</h4>
+          <ul>
+            <li>Applications internes pour gérer clients et stocks</li>
+            <li>Interfaces web sur-mesure adaptées à vos process</li>
+            <li>APIs dédiées pour connecter vos systèmes</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Accompagnement & formation -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="resume-item">
+          <h4>Accompagnement &amp; formation</h4>
+          <ul>
+            <li>Soutien pas-à-pas, explications simples</li>
+            <li>Documentation et tutoriels adaptés à votre niveau</li>
+            <li>Assistance continue et mise à jour de vos outils</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Réalisations possibles Section -->
+
+<div class="section-divider"></div>
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Nos Services</h2>
+    <p>Toutes vos solutions informatiques, simplifiées en 6 offres clés à Beauzac et alentours.</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- 1. Dépannage Informatique -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item item-cyan position-relative"
+             data-bs-toggle="modal" data-bs-target="#serviceModal1">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
+            </svg>
+            <i class="bi bi-tools"></i>
+          </div>
+          <h3>Dépannage Informatique</h3>
+          <p>Diagnostic et résolution de pannes, suppression de virus & malwares, sur site ou à distance.</p>
+        </div>
+      </div>
+
+      <!-- 2. Installation & Configuration -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-orange position-relative"
+             data-bs-toggle="modal" data-bs-target="#serviceModal2">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
+            </svg>
+            <i class="bi bi-hdd-stack"></i>
+          </div>
+          <h3>Installation &amp; Configuration</h3>
+          <p>Mise en place de périphériques, configuration Wi-Fi et paramétrage logiciels.</p>
+        </div>
+      </div>
+
+      <!-- 3. Sites Web & CMS -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item item-teal position-relative"
+             data-bs-toggle="modal" data-bs-target="#serviceModal3">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
+            </svg>
+            <i class="bi bi-globe2"></i>
+          </div>
+          <h3>Sites Web &amp; CMS</h3>
+          <p>Création, hébergement et maintenance de sites (WordPress, vitrine, e-commerce).</p>
+        </div>
+      </div>
+
+      <!-- 4. Automatisation & Logiciels -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item item-red position-relative"
+             data-bs-toggle="modal" data-bs-target="#serviceModal4">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+            </svg>
+            <i class="bi bi-robot"></i>
+          </div>
+          <h3>Automatisation &amp; Logiciels</h3>
+          <p>Scripts, assistants IA & intégrations API pour simplifier vos tâches.</p>
+        </div>
+      </div>
+
+      <!-- 5. Formation & Sécurité -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item item-indigo position-relative"
+             data-bs-toggle="modal" data-bs-target="#serviceModal5">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
+            </svg>
+            <i class="bi bi-shield-lock-fill"></i>
+          </div>
+          <h3>Formation &amp; Sécurité</h3>
+          <p>Ateliers Excel & bonnes pratiques pour éviter virus, phishing & protéger vos données.</p>
+        </div>
+      </div>
+
+      <!-- 6. Montage & Conseil Matériel -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item item-pink position-relative"
+             data-bs-toggle="modal" data-bs-target="#serviceModal6">
+          <div class="icon">
+            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
+            </svg>
+            <i class="bi bi-pc-display"></i>
+          </div>
+          <h3>Montage &amp; Conseil Matériel</h3>
+          <p>Assemblage PC personnalisé et conseils d’évolution selon votre budget.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /Services Section -->
+
+<!-- Modals détaillés -->
+<!-- Modal 1 -->
+<div class="modal fade" id="serviceModal1" tabindex="-1" aria-labelledby="serviceModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content service-item">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceModal1Label">Dépannage Informatique</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <div class="service-icon-title">
+          <div class="icon"><i class="bi bi-tools"></i></div>
+          <h3>Dépannage Informatique</h3>
+        </div>
+        <div class="description-box">
+          <ul>
+            <li>Diagnostic complet matériel & logiciel</li>
+            <li>Suppression de virus, malwares et ransomwares</li>
+            <li>Intervention sur site ou assistance à distance</li>
+            <li>Réparation de composants (disque, RAM, carte mère…)</li>
+            <li>Conseils pour éviter les pannes futures</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="serviceModal2" tabindex="-1" aria-labelledby="serviceModal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content service-item">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceModal2Label">Installation & Configuration</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <div class="service-icon-title">
+          <div class="icon"><i class="bi bi-hdd-stack"></i></div>
+          <h3>Installation & Configuration</h3>
+        </div>
+        <div class="description-box">
+          <ul>
+            <li>Installation et paramétrage de périphériques</li>
+            <li>Configuration réseau Wi-Fi et sécurisation</li>
+            <li>Paramétrage systèmes et logiciels</li>
+            <li>Mises à jour et optimisation des performances</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="serviceModal3" tabindex="-1" aria-labelledby="serviceModal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content service-item">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceModal3Label">Sites Web & CMS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <div class="service-icon-title">
+          <div class="icon"><i class="bi bi-globe2"></i></div>
+          <h3>Sites Web & CMS</h3>
+        </div>
+        <div class="description-box">
+          <ul>
+            <li>Design & développement sur-mesure</li>
+            <li>Intégration plugins et formulaire</li>
+            <li>Hébergement, nom de domaine & SSL</li>
+            <li>Maintenance & sauvegardes régulières</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="serviceModal4" tabindex="-1" aria-labelledby="serviceModal4Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content service-item">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceModal4Label">Automatisation & Logiciels</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <div class="service-icon-title">
+          <div class="icon"><i class="bi bi-robot"></i></div>
+          <h3>Automatisation & Logiciels</h3>
+        </div>
+        <div class="description-box">
+          <ul>
+            <li>Développement de scripts Python & macros VBA</li>
+            <li>Intégration d’APIs et synchronisation de données</li>
+            <li>Génération automatique de rapports (PDF, CSV)</li>
+            <li>Assistants IA pour tâches répétitives</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal fade" id="serviceModal5" tabindex="-1" aria-labelledby="serviceModal5Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content service-item">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceModal5Label">Formation & Sécurité</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <div class="service-icon-title">
+          <div class="icon"><i class="bi bi-shield-lock-fill"></i></div>
+          <h3>Formation & Sécurité</h3>
+        </div>
+        <div class="description-box">
+          <ul>
+            <li>Ateliers Excel : formules Excel</li>
+            <li>Bonnes pratiques antivirus & anti-phishing</li>
+            <li>Paramètres sécurité Windows/Mac</li>
+            <li>Sauvegarde & plan de reprise après sinistre</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 6 -->
+<div class="modal fade" id="serviceModal6" tabindex="-1" aria-labelledby="serviceModal6Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content service-item">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceModal6Label">Montage & Conseil Matériel</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <div class="service-icon-title">
+          <div class="icon"><i class="bi bi-pc-display"></i></div>
+          <h3>Montage & Conseil Matériel</h3>
+        </div>
+        <div class="description-box">
+          <ul>
+            <li>Assemblage PC personnalisé (gaming, bureautique...)</li>
+            <li>Conseils sur le choix de composants</li>
+            <li>Tests de performances & réglages BIOS</li>
+            <li>Entretien préventif et dépoussiérage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -457,7 +807,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contactez-nous</h2>
+        <h2>Contactez-moi</h2>
         <p>Nous sommes à votre disposition pour répondre à toutes vos questions sur nos services informatiques à Beauzac et ses environs.</p>
       </div><!-- End Section Title -->
 
@@ -572,411 +922,22 @@
   <!-- Main JS File -->
   <script src="assets/js/combined.min.js"></script>
 
-<!-- Modal HTML for Dépannage Informatique -->
-<div class="modal fade" id="serviceModal1" tabindex="-1" aria-labelledby="serviceModal1Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-cyan">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal1Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-activity"></i>
-          </div>
-          <h3>Dépannage Informatique</h3>
-        </div>
-        <div class="description-box">
-          <p>En tant qu'autoentrepreneur spécialisé en dépannage informatique à Beauzac et ses environs, je m'engage à résoudre rapidement et efficacement tous vos problèmes informatiques. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Diagnostic :</strong> Identification rapide des causes de vos problèmes informatiques, qu'il s'agisse de logiciels malveillants, de pannes matérielles ou de problèmes de configuration.</li>
-            <li><strong>Réparation :</strong> Réparations effectuées sur place ou à distance, en fonction de la nature du problème, pour minimiser les interruptions de vos activités.</li>
-            <li><strong>Optimisation :</strong> Amélioration des performances de votre système en nettoyant les fichiers inutiles, en optimisant les paramètres système et en mettant à jour les logiciels obsolètes.</li>
-            <li><strong>Sécurité :</strong> Mise en place de solutions antivirus robustes, de pare-feu et de sauvegardes régulières pour assurer la sécurité de vos données.</li>
-            <li><strong>Assistance :</strong> Disponibilité pour vous aider avec des conseils et des solutions à vos problèmes informatiques, par téléphone, par e-mail ou via un système de support en ligne.</li>
-          </ul>
-          <p>Je m'engage à fournir un service rapide et fiable pour que vous puissiez reprendre vos activités sans délai. Faites confiance à mon expertise pour résoudre vos problèmes informatiques avec efficacité et professionnalisme.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Récupération de Données -->
-<div class="modal fade" id="serviceModal2" tabindex="-1" aria-labelledby="serviceModal2Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-orange">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal2Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-broadcast"></i>
-          </div>
-          <h3>Récupération de Données</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous récupérons vos données perdues ou effacées accidentellement à Beauzac et ses environs. En tant qu'expert en récupération de données, je propose :</p>
-          <ul>
-            <li><strong>Analyse :</strong> Évaluation de la situation pour déterminer la meilleure méthode de récupération des données.</li>
-            <li><strong>Récupération :</strong> Utilisation d'outils et techniques avancées pour restaurer vos fichiers perdus.</li>
-            <li><strong>Prévention :</strong> Conseils sur les meilleures pratiques pour éviter la perte future de données.</li>
-          </ul>
-          <p>Je m'engage à récupérer vos données importantes rapidement et en toute sécurité.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Remise à Zéro -->
-<div class="modal fade" id="serviceModal3" tabindex="-1" aria-labelledby="serviceModal3Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-teal">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal3Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-easel"></i>
-          </div>
-          <h3>Remise à Zéro</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous remettons votre ordinateur à neuf, tout en sauvegardant vos données importantes à Beauzac et ses environs. Voici mes services :</p>
-          <ul>
-            <li><strong>Nettoyage :</strong> Suppression des fichiers inutiles et logiciels indésirables.</li>
-            <li><strong>Réinstallation :</strong> Réinstallation du système d'exploitation et des logiciels nécessaires.</li>
-            <li><strong>Sauvegarde :</strong> Sauvegarde et restauration de vos données importantes.</li>
-          </ul>
-          <p>Je m'assure que votre ordinateur fonctionne comme neuf, sans perte de données.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Formation Office -->
-<div class="modal fade" id="serviceModal4" tabindex="-1" aria-labelledby="serviceModal4Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-red">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal4Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-bounding-box-circles"></i>
-          </div>
-          <h3>Formation Office</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous vous apprenons à utiliser les outils Office comme Excel, Word, et PowerPoint. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Initiation :</strong> Formation de base pour les débutants pour maîtriser les fonctionnalités essentielles.</li>
-            <li><strong>Perfectionnement :</strong> Cours avancés pour améliorer vos compétences et productivité.</li>
-            <li><strong>Personnalisation :</strong> Formation adaptée à vos besoins spécifiques et à votre rythme.</li>
-          </ul>
-          <p>Je m'engage à vous fournir une formation de qualité pour vous aider à tirer le meilleur parti des outils Office.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Montage PC -->
-<div class="modal fade" id="serviceModal5" tabindex="-1" aria-labelledby="serviceModal5Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-indigo">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal5Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-calendar4-week"></i>
-          </div>
-          <h3>Montage PC</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous montons votre PC sur mesure, selon vos besoins et votre budget à Beauzac et ses environs. Voici mes services :</p>
-          <ul>
-            <li><strong>Conseil :</strong> Assistance pour choisir les composants adaptés à vos besoins.</li>
-            <li><strong>Montage :</strong> Assemblage professionnel de votre PC avec des composants de qualité.</li>
-            <li><strong>Test :</strong> Vérification et optimisation des performances de votre nouveau PC.</li>
-          </ul>
-          <p>Je m'engage à monter un PC performant et fiable, parfaitement adapté à vos exigences.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Recherche Composants -->
-<div class="modal fade" id="serviceModal6" tabindex="-1" aria-labelledby="serviceModal6Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-pink">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal6Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-chat-square-text"></i>
-          </div>
-          <h3>Recherche Composants</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous vous aidons à trouver les meilleurs composants pour votre PC. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Analyse :</strong> Évaluation de vos besoins pour identifier les composants adéquats.</li>
-            <li><strong>Recherche :</strong> Sélection des composants en fonction de la performance et du budget.</li>
-            <li><strong>Installation :</strong> Installation et configuration des composants dans votre PC.</li>
-          </ul>
-          <p>Je m'assure que votre PC est équipé des meilleurs composants pour des performances optimales.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Maintenance Préventive -->
-<div class="modal fade" id="serviceModal7" tabindex="-1" aria-labelledby="serviceModal7Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-purple">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal7Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-wrench"></i>
-          </div>
-          <h3>Maintenance Préventive</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous effectuons la maintenance préventive de vos systèmes pour éviter les pannes. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Inspection :</strong> Vérification régulière de l'état de votre matériel et de vos logiciels.</li>
-            <li><strong>Mises à jour :</strong> Installation des dernières mises à jour pour assurer la sécurité et la performance.</li>
-            <li><strong>Conseils :</strong> Recommandations pour prolonger la durée de vie de vos équipements.</li>
-          </ul>
-          <p>Je m'engage à maintenir vos systèmes en bon état de fonctionnement pour prévenir les pannes et les interruptions.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Consultation -->
-<div class="modal fade" id="serviceModal8" tabindex="-1" aria-labelledby="serviceModal8Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-yellow">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal8Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <h3>Consultation</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous offrons des consultations pour vous aider à optimiser vos systèmes informatiques. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Analyse :</strong> Évaluation de vos besoins et de votre infrastructure existante.</li>
-            <li><strong>Recommandations :</strong> Conseils sur les améliorations et les nouvelles technologies à adopter.</li>
-            <li><strong>Suivi :</strong> Accompagnement pour la mise en place des solutions recommandées.</li>
-          </ul>
-          <p>Je m'engage à vous fournir des conseils personnalisés pour optimiser vos systèmes informatiques et améliorer votre productivité.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Sauvegardes -->
-<div class="modal fade" id="serviceModal9" tabindex="-1" aria-labelledby="serviceModal9Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-green">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal9Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-shield-check"></i>
-          </div>
-          <h3>Sauvegardes</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous créons des sauvegardes régulières de vos données pour les protéger. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Planification :</strong> Élaboration d'un plan de sauvegarde adapté à vos besoins.</li>
-            <li><strong>Automatisation :</strong> Mise en place de solutions de sauvegarde automatiques et régulières.</li>
-            <li><strong>Récupération :</strong> Assistance pour restaurer vos données en cas de perte ou de panne.</li>
-          </ul>
-          <p>Je m'engage à protéger vos données avec des sauvegardes régulières et fiables pour éviter toute perte de données.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Recyclage -->
-<div class="modal fade" id="serviceModal10" tabindex="-1" aria-labelledby="serviceModal10Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-blue">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal10Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-recycle"></i>
-          </div>
-          <h3>Recyclage</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous recyclons et reconditionnons vos anciens équipements informatiques. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Collecte :</strong> Récupération de vos équipements obsolètes ou en panne.</li>
-            <li><strong>Recyclage :</strong> Traitement et recyclage des composants de manière écologique.</li>
-            <li><strong>Reconditionnement :</strong> Remise en état des équipements pour une seconde vie.</li>
-          </ul>
-          <p>Je m'engage à recycler vos équipements informatiques de manière responsable et écologique.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Formation Personnalisée -->
-<div class="modal fade" id="serviceModal11" tabindex="-1" aria-labelledby="serviceModal11Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-brown">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal11Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-person-check"></i>
-          </div>
-          <h3>Formation Personnalisée</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous offrons des formations personnalisées pour vous aider à maîtriser l'informatique. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Évaluation :</strong> Analyse de vos besoins en formation et de votre niveau actuel.</li>
-            <li><strong>Programme :</strong> Élaboration d'un programme de formation sur mesure.</li>
-            <li><strong>Suivi :</strong> Accompagnement personnalisé pour garantir votre progression.</li>
-          </ul>
-          <p>Je m'engage à vous offrir une formation personnalisée pour vous aider à atteindre vos objectifs informatiques.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Sites Internet -->
-<div class="modal fade" id="serviceModal12" tabindex="-1" aria-labelledby="serviceModal12Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-gray">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal12Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-code-slash"></i>
-          </div>
-          <h3>Sites Internet</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous développons des sites internet adaptés à vos besoins. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Design :</strong> Création de designs modernes et attrayants.</li>
-            <li><strong>Développement :</strong> Développement de sites web performants et sécurisés.</li>
-            <li><strong>Maintenance :</strong> Maintenance et mises à jour régulières pour assurer la stabilité et la sécurité.</li>
-          </ul>
-          <p>Je m'engage à créer des sites internet de qualité, adaptés à vos besoins et à votre budget.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal HTML for Applications -->
-<div class="modal fade" id="serviceModal13" tabindex="-1" aria-labelledby="serviceModal13Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content service-item item-black">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="serviceModal13Label"></h5>
-      </div>
-      <div class="modal-body">
-        <div class="service-icon-title">
-          <div class="icon">
-            <i class="bi bi-laptop"></i>
-          </div>
-          <h3>Applications</h3>
-        </div>
-        <div class="description-box">
-          <p>Nous créons des applications sur mesure pour répondre à vos besoins spécifiques. Voici ce que je propose :</p>
-          <ul>
-            <li><strong>Analyse :</strong> Évaluation de vos besoins et définition des fonctionnalités requises.</li>
-            <li><strong>Développement :</strong> Création d'applications performantes et sécurisées.</li>
-            <li><strong>Support :</strong> Assistance et mises à jour régulières pour assurer le bon fonctionnement.</li>
-          </ul>
-          <p>Je m'engage à développer des applications adaptées à vos besoins et à votre environnement professionnel.</p>
-        </div>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 </body>
 
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const typedElement = document.querySelector('.typed');
+    if (typedElement) {
+      const typedItems = typedElement.getAttribute('data-typed-items').split(',');
+      new Typed('.typed', {
+        strings: typedItems,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        loop: true
+      });
+    }
+  });
+</script>
