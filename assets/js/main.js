@@ -124,13 +124,6 @@
 
 })();
 
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('showPhoneNumber').addEventListener('click', function() {
-      this.style.display = 'none'; // Cacher le bouton
-      document.getElementById('phoneNumber').style.display = 'flex'; // Afficher le numéro de téléphone
-    });
-  });
-
 
 
 
