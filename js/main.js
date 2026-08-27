@@ -316,8 +316,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- 3. Circuit imprimé animé (hero) ---------- */
   const circuitSvg = document.querySelector('.hero-scope svg');
   const heroEl = document.querySelector('.hero');
-  const heroScopeEl = document.querySelector('.hero-scope');
-  if (circuitSvg && heroEl && !reduceMotion) {
+  const heroScopeVisible = window.matchMedia('(min-width: 981px)').matches;
+  if (circuitSvg && heroEl && !reduceMotion && heroScopeVisible) {
     const paths = Array.from(circuitSvg.querySelectorAll('.circuit-path'));
     const pulseLayer = circuitSvg.querySelector('.circuit-pulses');
     const pulses = paths.map((path, i) => {
@@ -340,13 +340,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     requestAnimationFrame(animateCircuit);
 
-    if (heroScopeEl) {
-      heroEl.addEventListener('mousemove', (e) => {
-        const r = heroScopeEl.getBoundingClientRect();
-        heroScopeEl.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        heroScopeEl.style.setProperty('--my', (e.clientY - r.top) + 'px');
-      });
-    }
   }
 
   /* ---------- 4. Illustrations qui se dessinent au scroll ---------- */
