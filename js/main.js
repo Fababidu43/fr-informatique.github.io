@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  document.querySelectorAll('section.dark').forEach(sec => {
+  document.querySelectorAll('section.dark, .site-footer').forEach(sec => {
     sec.addEventListener('mousemove', (e) => {
       const r = sec.getBoundingClientRect();
       sec.style.setProperty('--mx', (e.clientX - r.left) + 'px');
@@ -395,6 +395,30 @@ document.addEventListener('DOMContentLoaded', () => {
     ['pointerup', 'pointerleave', 'pointercancel'].forEach(evt =>
       slider.addEventListener(evt, () => { dragging = false; })
     );
+  });
+
+  /* ---------- 7. Copie de l'e-mail au clic (secours si aucun client mail n'est configuré) ---------- */
+  const showEmailToast = (email) => {
+    let toast = document.querySelector('.email-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'email-toast';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = `Adresse copiée : ${email}`;
+    toast.classList.remove('show');
+    void toast.offsetWidth;
+    toast.classList.add('show');
+    clearTimeout(toast._hideTimer);
+    toast._hideTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+  };
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const email = link.href.replace('mailto:', '').split('?')[0];
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(email).then(() => showEmailToast(email)).catch(() => {});
+      }
+    });
   });
 
 });
