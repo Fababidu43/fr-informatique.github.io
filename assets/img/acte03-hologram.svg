@@ -1,0 +1,299 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 520 760"
+     width="520"
+     height="760"
+     fill="none">
+
+  <defs>
+    <linearGradient id="cyan" x1="90" y1="0" x2="430" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2ED8F3"/>
+      <stop offset="1" stop-color="#00A9D6"/>
+    </linearGradient>
+
+    <linearGradient id="violet" x1="120" y1="0" x2="400" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C5CFF"/>
+      <stop offset="1" stop-color="#9A55F8"/>
+    </linearGradient>
+
+    <linearGradient id="mix" x1="90" y1="80" x2="430" y2="690" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#29D7F0"/>
+      <stop offset="0.48" stop-color="#715CFF"/>
+      <stop offset="1" stop-color="#24CFE8"/>
+    </linearGradient>
+
+    <radialGradient id="cyanOrb" cx="50%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#E9FEFF"/>
+      <stop offset="0.32" stop-color="#6FF4FF"/>
+      <stop offset="1" stop-color="#20CBE8"/>
+    </radialGradient>
+
+    <radialGradient id="violetOrb" cx="50%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#F5EEFF"/>
+      <stop offset="0.30" stop-color="#C593FF"/>
+      <stop offset="1" stop-color="#7A45E8"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="tinyGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style><![CDATA[
+    .layer {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: follow 5.2s cubic-bezier(.42,.03,.22,1) infinite;
+    }
+
+    .layer-1 { animation-delay: 0s; }
+    .layer-2 { animation-delay: .14s; }
+    .layer-3 { animation-delay: .28s; }
+    .layer-4 { animation-delay: .42s; }
+
+    .orb {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pulse 2.7s ease-in-out infinite;
+    }
+
+    .orb-2 { animation-delay: .35s; }
+    .orb-3 { animation-delay: .7s; }
+    .orb-4 { animation-delay: 1.05s; }
+
+    .core {
+      stroke-dasharray: 3 9;
+      animation: dash 2.2s linear infinite;
+    }
+
+    .trail {
+      opacity: 0;
+      animation: trailFall 4.6s linear infinite;
+    }
+
+    .trail-2 { animation-delay: 1.1s; animation-duration: 5.4s; }
+    .trail-3 { animation-delay: 2.3s; animation-duration: 4.9s; }
+    .trail-4 { animation-delay: .55s; animation-duration: 5.8s; }
+
+    .spark {
+      opacity: 0;
+      animation: spark 3.8s ease-in-out infinite;
+    }
+
+    .spark-2 { animation-delay: 1.2s; }
+    .spark-3 { animation-delay: 2.1s; }
+
+    .base {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: basePulse 3.2s ease-in-out infinite;
+    }
+
+    @keyframes follow {
+      0%,100% { transform: translateY(0); }
+      18%     { transform: translateY(-16px); }
+      42%     { transform: translateY(-4px); }
+      70%     { transform: translateY(7px); }
+    }
+
+    @keyframes pulse {
+      0%,100% { transform: scale(1); opacity:.92; }
+      50%     { transform: scale(1.13); opacity:1; }
+    }
+
+    @keyframes dash {
+      to { stroke-dashoffset: -24; }
+    }
+
+    @keyframes trailFall {
+      0%   { transform: translateY(-90px); opacity:0; }
+      14%  { opacity:.48; }
+      58%  { opacity:.42; }
+      100% { transform: translateY(870px); opacity:0; }
+    }
+
+    @keyframes spark {
+      0%,100% { opacity:0; transform: translateY(0); }
+      25%     { opacity:.65; }
+      55%     { opacity:.25; transform: translateY(10px); }
+    }
+
+    @keyframes basePulse {
+      0%,100% { transform: scaleX(.90); opacity:.44; }
+      50%     { transform: scaleX(1.06); opacity:.80; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  ]]></style>
+
+  <!-- Sobres petites traînées verticales -->
+  <g>
+    <g class="trail" transform="translate(78 0)">
+      <line x1="0" y1="-34" x2="0" y2="10"
+            stroke="#2ED8F3" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="0" cy="12" r="2.2" fill="#54E9F8" filter="url(#tinyGlow)"/>
+    </g>
+
+    <g class="trail trail-2" transform="translate(438 0)">
+      <line x1="0" y1="-28" x2="0" y2="9"
+            stroke="#7C5CFF" stroke-width="1.15" stroke-linecap="round"/>
+      <circle cx="0" cy="11" r="2" fill="#9E7BFF" filter="url(#tinyGlow)"/>
+    </g>
+
+    <g class="trail trail-3" transform="translate(120 0)">
+      <line x1="0" y1="-24" x2="0" y2="8"
+            stroke="#2ED8F3" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="0" cy="10" r="1.8" fill="#57EDF9"/>
+    </g>
+
+    <g class="trail trail-4" transform="translate(390 0)">
+      <line x1="0" y1="-24" x2="0" y2="8"
+            stroke="#31C7E6" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="0" cy="10" r="1.8" fill="#52E7F6"/>
+    </g>
+  </g>
+
+  <!-- Petits points discrets -->
+  <circle class="spark" cx="58" cy="214" r="1.8" fill="#29D7F0"/>
+  <circle class="spark spark-2" cx="462" cy="286" r="1.8" fill="#29D7F0"/>
+  <circle class="spark spark-3" cx="420" cy="518" r="1.6" fill="#7C5CFF"/>
+
+  <!-- Axe central -->
+  <line class="core"
+        x1="260" y1="58"
+        x2="260" y2="694"
+        stroke="url(#mix)"
+        stroke-width="1.2"
+        opacity=".55"/>
+
+  <!-- Niveau 1 -->
+  <g class="layer layer-1">
+    <path d="M260 88 L420 158 L260 228 L100 158 Z"
+          stroke="url(#cyan)"
+          stroke-width="1.8"
+          opacity=".90"/>
+
+    <path d="M260 116 L366 160 L260 204 L154 160 Z"
+          stroke="#2ED8F3"
+          stroke-width=".9"
+          stroke-dasharray="5 7"
+          opacity=".26"/>
+
+    <circle cx="260" cy="88" r="4.5" fill="#43E1F3"/>
+    <circle cx="100" cy="158" r="3.2" fill="#23CBE7"/>
+    <circle cx="420" cy="158" r="3.2" fill="#23CBE7"/>
+
+    <circle class="orb" cx="260" cy="228" r="10.5"
+            fill="url(#cyanOrb)"
+            filter="url(#softGlow)"/>
+  </g>
+
+  <!-- Niveau 2 -->
+  <g class="layer layer-2">
+    <path d="M260 246 L414 314 L260 382 L106 314 Z"
+          stroke="url(#mix)"
+          stroke-width="1.8"
+          opacity=".90"/>
+
+    <path d="M260 274 L360 316 L260 358 L160 316 Z"
+          stroke="#6D62F7"
+          stroke-width=".9"
+          stroke-dasharray="5 7"
+          opacity=".28"/>
+
+    <circle class="orb orb-2" cx="260" cy="246" r="8.5"
+            fill="url(#cyanOrb)"
+            filter="url(#tinyGlow)"/>
+
+    <circle cx="106" cy="314" r="3" fill="#3ECBE9"/>
+    <circle cx="414" cy="314" r="3" fill="#7562F4"/>
+
+    <circle cx="260" cy="382" r="10.8"
+            fill="url(#violetOrb)"
+            filter="url(#softGlow)"/>
+  </g>
+
+  <!-- Niveau 3 -->
+  <g class="layer layer-3">
+    <path d="M260 400 L412 468 L260 536 L108 468 Z"
+          stroke="url(#violet)"
+          stroke-width="1.8"
+          opacity=".92"/>
+
+    <path d="M260 428 L358 470 L260 512 L162 470 Z"
+          stroke="#8E61F8"
+          stroke-width=".9"
+          stroke-dasharray="5 7"
+          opacity=".28"/>
+
+    <circle class="orb orb-3" cx="260" cy="400" r="8.8"
+            fill="url(#violetOrb)"
+            filter="url(#tinyGlow)"/>
+
+    <circle cx="108" cy="468" r="3" fill="#8D62F7"/>
+    <circle cx="412" cy="468" r="3" fill="#8D62F7"/>
+
+    <circle cx="260" cy="536" r="10.5"
+            fill="url(#cyanOrb)"
+            filter="url(#softGlow)"/>
+  </g>
+
+  <!-- Niveau 4 -->
+  <g class="layer layer-4">
+    <path d="M260 554 L410 620 L260 686 L110 620 Z"
+          stroke="url(#cyan)"
+          stroke-width="1.8"
+          opacity=".92"/>
+
+    <path d="M260 582 L356 622 L260 662 L164 622 Z"
+          stroke="#2ED8F3"
+          stroke-width=".9"
+          stroke-dasharray="5 7"
+          opacity=".25"/>
+
+    <circle class="orb orb-4" cx="260" cy="554" r="8.8"
+            fill="url(#cyanOrb)"
+            filter="url(#tinyGlow)"/>
+
+    <circle cx="110" cy="620" r="3" fill="#24CDE7"/>
+    <circle cx="410" cy="620" r="3" fill="#24CDE7"/>
+
+    <circle cx="260" cy="686" r="6.5"
+            fill="url(#cyanOrb)"
+            filter="url(#tinyGlow)"/>
+  </g>
+
+  <!-- Base holographique -->
+  <g class="base">
+    <ellipse cx="260" cy="716" rx="84" ry="12"
+             stroke="#2ED8F3" stroke-width="1"
+             opacity=".60"/>
+
+    <ellipse cx="260" cy="716" rx="54" ry="8"
+             stroke="#4D8DF7" stroke-width=".9"
+             opacity=".42"/>
+
+    <ellipse cx="260" cy="716" rx="24" ry="4.5"
+             fill="#2ED8F3"
+             opacity=".12"
+             filter="url(#softGlow)"/>
+
+    <circle cx="260" cy="716" r="2.7"
+            fill="#6BF1FF"
+            filter="url(#tinyGlow)"/>
+  </g>
+
+</svg>
