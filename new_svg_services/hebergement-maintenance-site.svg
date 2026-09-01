@@ -1,0 +1,172 @@
+<svg width="100%" height="100%" viewBox="0 0 620 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flowhb" x1="105" y1="145" x2="510" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39D9F1"/>
+      <stop offset=".55" stop-color="#6E8BFF"/>
+      <stop offset="1" stop-color="#9A70FF"/>
+    </linearGradient>
+
+    <linearGradient id="panelhb" x1="160" y1="100" x2="460" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20275A"/>
+      <stop offset="1" stop-color="#171D4A"/>
+    </linearGradient>
+
+    <filter id="glowhb" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.22
+                0 0 0 0 0.85
+                0 0 0 0 0.95
+                0 0 0 0.7 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <marker id="arrowhb" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto">
+      <path d="M1 1L8 4.5L1 8" stroke="#8E7CFF" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+
+    <clipPath id="screenCliphb">
+      <rect x="210" y="170" width="200" height="125" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .grid-linehb { stroke:#2D356B; stroke-width:1; opacity:.55; }
+    .tinyhb { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing:.08em; fill:#8E98C9; font-size:11px; }
+    .labelhb { font-family: Inter, Arial, sans-serif; fill:#F7F8FF; font-size:14px; font-weight:600; }
+    .subhb { font-family: Inter, Arial, sans-serif; fill:#9AA3CF; font-size:11px; }
+
+    .dashhb { stroke-dasharray:10 12; animation: dashMovehb 2.1s linear infinite; }
+    .pulsehb { transform-box: fill-box; transform-origin:center; animation:pulsehb 2.4s ease-in-out infinite; }
+    .pulse2hb { animation-delay:.7s; }
+    .pulse3hb { animation-delay:1.4s; }
+
+    .floathb { animation:floathb 4.2s ease-in-out infinite; }
+    .float2hb { animation:floathb 4.2s ease-in-out infinite; animation-delay:-1.4s; }
+
+    .scanhb { animation:scanhb 3.4s ease-in-out infinite; }
+
+    .spinhb { animation:spinhb 6s linear infinite; transform-box:fill-box; transform-origin:center; }
+
+    .bar1hb { animation:barGrowhb 3.6s ease-in-out infinite; transform-origin:left center; }
+    .bar2hb { animation:barGrowhb 3.6s ease-in-out infinite .2s; transform-origin:left center; }
+    .bar3hb { animation:barGrowhb 3.6s ease-in-out infinite .4s; transform-origin:left center; }
+
+    .notifhb { animation:notifPophb 4.6s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+
+    @keyframes dashMovehb { to { stroke-dashoffset:-44; } }
+    @keyframes pulsehb { 0%,100% { transform:scale(1); opacity:.9; } 50% { transform:scale(1.12); opacity:1; } }
+    @keyframes floathb { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
+    @keyframes scanhb { 0% { transform:translateY(-70px); opacity:0; } 15% { opacity:.75; } 70% { opacity:.25; } 100% { transform:translateY(170px); opacity:0; } }
+    @keyframes spinhb { to { transform:rotate(360deg); } }
+    @keyframes barGrowhb { 0%,100% { transform:scaleX(.55); opacity:.45; } 50% { transform:scaleX(1); opacity:1; } }
+    @keyframes notifPophb { 0%,48%,100% { transform:scale(.78); opacity:0; } 55%,84% { transform:scale(1); opacity:1; } }
+
+    @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
+  </style>
+
+  <!-- background -->
+  <rect x="1" y="1" width="618" height="498" rx="18" fill="#1A1D4B" stroke="#314078"/>
+
+  <!-- subtle grid -->
+  <g opacity=".7">
+    <path class="grid-linehb" d="M48 70H572"/>
+    <path class="grid-linehb" d="M48 135H572"/>
+    <path class="grid-linehb" d="M48 200H572"/>
+    <path class="grid-linehb" d="M48 265H572"/>
+    <path class="grid-linehb" d="M48 330H572"/>
+    <path class="grid-linehb" d="M48 395H572"/>
+    <path class="grid-linehb" d="M115 45V430"/>
+    <path class="grid-linehb" d="M205 45V430"/>
+    <path class="grid-linehb" d="M295 45V430"/>
+    <path class="grid-linehb" d="M385 45V430"/>
+    <path class="grid-linehb" d="M475 45V430"/>
+  </g>
+
+  <!-- ambient particles -->
+  <g filter="url(#glowhb)">
+    <circle cx="67" cy="374" r="4" fill="#42E4F5" class="pulsehb"/>
+    <circle cx="544" cy="92" r="4" fill="#42E4F5" class="pulsehb pulse2hb"/>
+    <circle cx="526" cy="405" r="3.5" fill="#9A70FF" class="pulsehb pulse3hb"/>
+  </g>
+
+  <!-- main flow -->
+  <path d="M108 130 C170 150 175 225 250 225 C330 225 330 170 405 210 C465 242 445 322 505 352"
+        stroke="url(#flowhb)" stroke-width="2.5" fill="none" opacity=".95" marker-end="url(#arrowhb)"/>
+  <path d="M108 130 C170 150 175 225 250 225 C330 225 330 170 405 210 C465 242 445 322 505 352"
+        stroke="#7FE8FF" stroke-width="1" fill="none" opacity=".4" class="dashhb"/>
+
+  <!-- 01 -->
+  <g class="floathb">
+    <circle cx="105" cy="128" r="41" fill="#1C285A" stroke="#42DDF2" stroke-width="2"/>
+    <circle cx="105" cy="128" r="30" stroke="#42DDF2" stroke-width="1" opacity=".18" class="pulsehb"/>
+<path d="M105 104L128 150H82L105 104Z" stroke="#42DDF2" stroke-width="2" stroke-linejoin="round" fill="none"/>
+<path d="M105 120V134" stroke="#42DDF2" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="105" cy="141" r="1.7" fill="#42DDF2"/>
+    <text x="105" y="181" text-anchor="middle" class="tinyhb">01 · SITE LENT / EN PANNE</text>
+  </g>
+
+  <!-- 02 -->
+  <g>
+    <rect x="191" y="143" width="238" height="181" rx="16" fill="url(#panelhb)" stroke="#4663AE" stroke-width="1.3"/>
+    <rect x="210" y="170" width="200" height="125" rx="10" fill="#10163E" stroke="#384A8B"/>
+    <circle cx="224" cy="157" r="3" fill="#42DDF2"/>
+    <circle cx="235" cy="157" r="3" fill="#6674BC"/>
+    <circle cx="246" cy="157" r="3" fill="#8E7CFF"/>
+
+    <g clip-path="url(#screenCliphb)">
+
+      <rect x="222" y="184" width="70" height="8" rx="4" fill="#F3F5FF" opacity=".92"/>
+      <rect x="222" y="201" width="150" height="5" rx="2.5" fill="#6F7CB7" opacity=".7"/>
+
+      <rect x="222" y="218" width="165" height="18" rx="6" fill="#1B2354" stroke="#33427B"/>
+      <circle cx="233" cy="227" r="4" fill="#3FE07E" class="pulsehb"/>
+      <rect x="246" y="224" width="80" height="5" rx="2.5" fill="#8C97CC"/>
+      <text x="378" y="230" text-anchor="end" class="tinyhb" fill="#3FE07E" font-size="9">OK</text>
+
+      <rect x="222" y="242" width="165" height="18" rx="6" fill="#1B2354" stroke="#33427B"/>
+      <circle cx="233" cy="251" r="4" fill="#3FE07E" class="pulsehb pulse2hb"/>
+      <rect x="246" y="248" width="100" height="5" rx="2.5" fill="#8C97CC"/>
+      <text x="378" y="254" text-anchor="end" class="tinyhb" fill="#3FE07E" font-size="9">OK</text>
+
+      <rect x="222" y="266" width="165" height="18" rx="6" fill="#1B2354" stroke="#33427B"/>
+      <circle cx="233" cy="275" r="4" fill="#3FE07E" class="pulsehb pulse3hb"/>
+      <rect x="246" y="272" width="64" height="5" rx="2.5" fill="#8C97CC"/>
+      <text x="378" y="278" text-anchor="end" class="tinyhb" fill="#3FE07E" font-size="9">OK</text>
+
+      <rect x="210" y="170" width="200" height="2" fill="#42DDF2" opacity=".8" class="scanhb"/>
+
+    </g>
+
+    <text x="310" y="346" text-anchor="middle" class="labelhb">HÉBERGEMENT SURVEILLÉ 24/7</text>
+    <text x="310" y="365" text-anchor="middle" class="subhb">Sauvegardes et mises à jour gérées pour vous</text>
+  </g>
+
+  <!-- 03 -->
+  <g class="float2hb">
+    <circle cx="508" cy="355" r="43" fill="#1C285A" stroke="#8E7CFF" stroke-width="2"/>
+<path d="M508 339l15 5v11c0 9 -6.5 15 -15 19c-8.5 -4 -15 -10 -15 -19v-11l15 -5Z" stroke="#8E7CFF" stroke-width="2" fill="none" stroke-linejoin="round"/>
+<path d="M501 355l5 5l10 -11" stroke="#8E7CFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="508" y="412" text-anchor="middle" class="tinyhb">03 · SÉRÉNITÉ</text>
+  </g>
+
+  <!-- mini panel -->
+  <g transform="translate(54 418)">
+    <rect width="512" height="48" rx="9" fill="#12163A" stroke="#33427B"/>
+    <text x="16" y="20" class="tinyhb" fill="#47DFF3">TOUJOURS EN LIGNE</text>
+    <text x="16" y="36" class="subhb">Surveillance → sauvegarde → intervention rapide</text>
+
+    <g transform="translate(345 14)">
+      <rect x="0" y="0" width="45" height="4" rx="2" fill="#324477"/>
+      <rect x="0" y="0" width="45" height="4" rx="2" fill="#42DDF2" class="bar1hb"/>
+      <rect x="0" y="10" width="70" height="4" rx="2" fill="#324477"/>
+      <rect x="0" y="10" width="70" height="4" rx="2" fill="#6B89FF" class="bar2hb"/>
+      <rect x="0" y="20" width="92" height="4" rx="2" fill="#324477"/>
+      <rect x="0" y="20" width="92" height="4" rx="2" fill="#9A70FF" class="bar3hb"/>
+    </g>
+  </g>
+
+</svg>

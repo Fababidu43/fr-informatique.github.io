@@ -1,0 +1,430 @@
+Je veux faire évoluer le contenu du site FR Informatique sans modifier profondément son identité visuelle.
+
+L’objectif est de repositionner l’activité principalement vers les petites entreprises, artisans, garages, petites industries, indépendants et PME de Haute-Loire, principalement dans un rayon d’environ 40 à 50 km autour de Beauzac. Les projets pouvant être réalisés entièrement à distance peuvent également être acceptés partout en France.
+
+Le dépannage informatique doit rester présent sur le site, notamment pour le référencement local, mais il doit devenir secondaire.
+
+Les services principaux à mettre davantage en avant sont :
+
+création de sites internet vitrines sur mesure ;
+hébergement et maintenance de sites ;
+automatisation de tâches répétitives ;
+workflows n8n et automatisations développées sur mesure ;
+scraping et collecte automatisée de données ;
+développement de petits logiciels et outils métier sur mesure ;
+création et intégration d’API ;
+bases de données et SQL ;
+Excel, VBA, macros, compléments Excel et automatisation de fichiers ;
+intelligence artificielle et intégration d’IA dans des processus existants.
+
+Créer de nouvelles pages dédiées à ces différentes prestations afin que chacune puisse être correctement comprise par les visiteurs et référencée individuellement sur Google.
+
+Règle principale de rédaction
+
+Le site doit être écrit pour des prospects qui ne connaissent quasiment rien à l’informatique.
+
+Il faut donc utiliser un vocabulaire extrêmement simple, clair et accessible.
+
+Toujours expliquer le problème avant la technologie.
+
+Éviter au maximum les termes techniques comme API, SQL, scraping, workflow, VBA, Python, base de données, webhook, etc.
+
+Lorsqu’un terme technique est nécessaire, toujours l’expliquer immédiatement avec des mots simples et un exemple concret.
+
+Le prospect doit pouvoir comprendre ce que FR Informatique peut lui apporter sans avoir besoin de connaître quoi que ce soit au développement informatique.
+
+Par exemple, ne pas écrire uniquement :
+
+« Automatisation de données entre plusieurs systèmes »
+
+Préférer :
+
+« Vous recopiez chaque semaine les mêmes informations d’un fichier Excel vers un autre ? Cette tâche peut probablement être faite automatiquement. »
+
+Ne pas écrire uniquement :
+
+« Création d’API »
+
+Préférer :
+
+« Deux outils que vous utilisez ne communiquent pas entre eux ? Il est parfois possible de créer un petit pont entre les deux pour éviter de recopier les mêmes informations plusieurs fois. »
+
+Ne pas écrire uniquement :
+
+« Scraping web »
+
+Préférer :
+
+« Vous allez régulièrement sur plusieurs sites internet pour récupérer des prix, références ou informations ? Ces données peuvent parfois être récupérées automatiquement puis rangées dans un fichier Excel ou une base de données. »
+
+Le site doit contenir beaucoup d’exemples concrets, car le but est que le prospect puisse se reconnaître dans une situation.
+
+Utiliser régulièrement des exemples comme :
+
+Vous recopiez régulièrement les mêmes informations ?
+Vous réalisez la même manipulation tous les matins ?
+Vous passez du temps à remplir plusieurs fichiers Excel ?
+Vous récupérez manuellement des informations sur internet ?
+Vous devez régulièrement renommer, classer ou transformer des fichiers ?
+Vous envoyez souvent les mêmes documents ou les mêmes mails ?
+Vous devez copier des informations entre plusieurs outils ?
+Votre fichier Excel devient compliqué à utiliser ?
+Vous aimeriez qu’une tâche se fasse automatiquement ?
+Vous avez besoin d’un petit outil adapté à votre façon de travailler ?
+Vous perdez plusieurs heures par semaine sur une tâche répétitive ?
+Vous avez une idée mais aucun logiciel existant ne correspond exactement à votre besoin ?
+
+L’objectif est que le prospect puisse se dire :
+
+« Je ne savais pas que c’était possible, mais ça pourrait clairement me faire gagner du temps. »
+
+Création de sites internet
+
+Pour la création de sites internet, proposer uniquement des sites vitrines.
+
+Ne jamais proposer :
+
+site marchand ;
+e-commerce ;
+WordPress ;
+PrestaShop ;
+Shopify ;
+ou tout autre CMS.
+
+Les sites sont développés sur mesure.
+
+FR Informatique peut également gérer :
+
+l’hébergement ;
+le nom de domaine si nécessaire ;
+la mise en ligne ;
+la maintenance ;
+les petites évolutions ;
+les connexions simples à des API lorsque cela apporte quelque chose au projet.
+
+La page doit expliquer simplement ce qu’est un site vitrine et à quoi il sert.
+
+Utiliser beaucoup d’exemples adaptés aux petites entreprises :
+
+artisan qui veut présenter son travail ;
+garage qui veut montrer ses prestations ;
+petite industrie qui veut présenter son savoir-faire ;
+entreprise qui possède encore un ancien site ;
+entreprise qui n’a aucun site internet ;
+indépendant qui veut être trouvé sur Google.
+Automatisation
+
+L’automatisation doit faire partie des services les plus importants du site.
+
+Il faut insister sur l’analyse des tâches répétitives réalisées dans l’entreprise puis sur leur automatisation.
+
+Les solutions peuvent utiliser selon les besoins :
+
+Python ;
+n8n ;
+API ;
+scripts sur mesure ;
+Excel ;
+VBA ;
+intelligence artificielle ;
+autres outils adaptés.
+
+Cependant, ces technologies doivent rester secondaires dans le discours commercial.
+
+Le plus important est d’expliquer ce que cela change concrètement pour le client :
+
+moins de saisie manuelle ;
+moins d’erreurs ;
+moins de temps perdu ;
+moins de copier-coller ;
+tâches effectuées automatiquement ;
+fichiers générés automatiquement ;
+informations récupérées automatiquement ;
+traitement automatique de données.
+
+Mettre énormément d’exemples de petites automatisations réalistes adaptées à une petite entreprise.
+
+Scraping et collecte de données
+
+Présenter le scraping avec des mots simples.
+
+Ne pas partir du principe que le visiteur connaît ce mot.
+
+Expliquer plutôt qu’il est possible, dans certains cas, de récupérer automatiquement des informations présentes sur internet au lieu de les recopier manuellement.
+
+Exemples :
+
+récupérer régulièrement des tarifs ;
+suivre des références ;
+récupérer des informations fournisseurs ;
+comparer certaines données ;
+récupérer des listes ;
+surveiller l’évolution d’informations ;
+regrouper des informations venant de plusieurs pages ;
+exporter les résultats dans Excel, CSV ou une base de données.
+
+Présenter également :
+
+nettoyage des données ;
+classement ;
+transformation ;
+suppression des doublons ;
+export automatique.
+
+Toujours préciser que la récupération de données doit respecter les règles applicables, les conditions d’utilisation des sites et la réglementation concernant les données personnelles.
+
+Logiciels et outils sur mesure
+
+Présenter la possibilité de développer de petits logiciels et outils métier sur mesure.
+
+Rester sur des projets raisonnables adaptés à une entreprise individuelle.
+
+Ne pas présenter FR Informatique comme capable de développer de gros systèmes complets tels que :
+
+ERP complet ;
+CRM complet ;
+gros logiciel de gestion de stock ;
+système complet de suivi clients ;
+outil de production industriel complexe ;
+énorme logiciel métier couvrant toute l’entreprise.
+
+Présenter plutôt des projets plus ciblés :
+
+petit outil interne ;
+interface simple ;
+programme permettant d’automatiser une tâche ;
+outil de traitement de fichiers ;
+logiciel permettant de rechercher ou classer des informations ;
+petite application adaptée à une méthode de travail précise ;
+programme permettant de remplacer un fichier Excel devenu trop compliqué ;
+outil permettant de générer automatiquement des documents.
+
+L’objectif est de montrer qu’un logiciel sur mesure ne signifie pas forcément un énorme projet coûteux.
+
+API et intégrations
+
+Mettre en avant :
+
+création d’API ;
+utilisation d’API existantes ;
+connexion simple entre plusieurs outils ;
+échange automatique de données ;
+récupération d’informations depuis un service externe ;
+envoi automatique d’informations vers un autre outil.
+
+Éviter d’orienter le service vers de grosses intégrations ERP ou CRM.
+
+Éviter également les projets nécessitant de modifier profondément le CRM d’un client ou des systèmes particulièrement sensibles.
+
+Présenter les API avec une métaphore simple, par exemple :
+
+« Une API peut être vue comme un pont permettant à deux logiciels d’échanger automatiquement des informations. »
+
+Bases de données et SQL
+
+Présenter les bases de données simplement.
+
+Le prospect n’a pas besoin de connaître SQL.
+
+Expliquer que FR Informatique peut aider lorsqu’une entreprise possède beaucoup d’informations dispersées ou difficiles à exploiter.
+
+Services possibles :
+
+création de bases de données ;
+requêtes SQL ;
+recherche rapide dans de grandes quantités d’informations ;
+nettoyage ;
+transformation ;
+suppression de doublons ;
+import ;
+export ;
+automatisation ;
+exploitation de petites, moyennes ou grandes quantités de données ;
+connexion simple avec d’autres outils lorsque cela est pertinent.
+
+Utiliser des exemples très concrets :
+
+plusieurs fichiers contenant les mêmes clients ;
+catalogue avec beaucoup de références ;
+historique contenant plusieurs milliers de lignes ;
+informations difficiles à rechercher ;
+données devant être nettoyées ou regroupées.
+Excel et VBA
+
+Créer une page dédiée à Excel et à l’automatisation de fichiers.
+
+Présenter notamment :
+
+macros Excel ;
+VBA ;
+compléments Excel ;
+boutons personnalisés ;
+automatisation de fichiers ;
+traitement automatique de données ;
+import et export ;
+génération de documents ;
+nettoyage de fichiers ;
+transformation de données ;
+automatisation de manipulations répétitives.
+
+Utiliser énormément d’exemples concrets.
+
+Par exemple :
+
+« Vous ouvrez chaque semaine le même fichier, supprimez certaines colonnes, classez les lignes puis créez un nouveau fichier ? Tout cela peut parfois être réalisé en un seul clic. »
+
+Intelligence artificielle
+
+Présenter l’intelligence artificielle uniquement à travers des cas d’usage concrets.
+
+Éviter les grandes phrases marketing vagues autour de l’IA.
+
+Présenter par exemple :
+
+analyse de documents ;
+extraction automatique d’informations ;
+classement automatique ;
+résumé de textes ;
+aide à la rédaction ;
+analyse d’e-mails ;
+recherche intelligente dans des documents ;
+traitement automatique de données non structurées ;
+intégration d’une IA dans une automatisation ;
+assistants simples adaptés à un besoin précis.
+
+Toujours montrer le bénéfice réel pour l’entreprise.
+
+Dépannage informatique
+
+Conserver une page de dépannage informatique pour le référencement local et les clients existants.
+
+Cette activité doit cependant être moins mise en avant que les services professionnels.
+
+Présenter simplement :
+
+dépannage PC ;
+problèmes Windows ;
+virus ;
+installation ;
+sauvegarde ;
+problèmes logiciels ;
+assistance ;
+conseil informatique.
+Page d’accueil
+
+La page d’accueil doit être revue afin que le dépannage ne soit plus l’activité principale perçue.
+
+Mettre en avant en priorité :
+
+création de sites internet vitrines ;
+automatisation ;
+développement de petits outils sur mesure ;
+scraping et récupération de données ;
+Excel et traitement de données ;
+intelligence artificielle ;
+bases de données.
+
+Le dépannage doit apparaître plus bas.
+
+Ajouter une section importante basée sur les problèmes du visiteur, avec un titre du type :
+
+Vous perdez du temps sur ce genre de tâches ?
+
+Puis présenter de nombreux exemples très simples de tâches répétitives susceptibles d’être automatisées.
+
+Positionnement général
+
+FR Informatique doit être présenté comme un développeur indépendant proche des petites entreprises, capable de comprendre leur fonctionnement et de créer des solutions simples adaptées à leurs besoins.
+
+Il ne faut pas donner l’image :
+
+d’une grosse agence ;
+d’une ESN ;
+d’une entreprise proposant des projets informatiques énormes ;
+d’un prestataire uniquement spécialisé dans le dépannage.
+
+Le site doit transmettre l’idée :
+
+« Vous avez un problème informatique, une tâche répétitive ou une idée ? Expliquez simplement comment vous travaillez et FR Informatique cherchera une solution adaptée. »
+
+Référencement naturel / SEO
+
+Le référencement Google est un objectif majeur de cette évolution.
+
+Chaque nouvelle page doit être pensée pour cibler clairement une prestation.
+
+Le contenu doit être suffisamment riche pour permettre à Google de comprendre précisément les services proposés.
+
+Travailler naturellement le référencement autour de la Haute-Loire et notamment :
+
+Beauzac ;
+Monistrol-sur-Loire ;
+Yssingeaux ;
+Le Puy-en-Velay ;
+Retournac ;
+Bas-en-Basset ;
+Sainte-Sigolène ;
+et les communes situées dans la zone d’intervention.
+
+Les projets entièrement réalisables à distance peuvent également être proposés partout en France.
+
+Utiliser naturellement des recherches susceptibles d’être effectuées par de vrais clients, par exemple :
+
+création site internet Haute-Loire ;
+création site internet Monistrol-sur-Loire ;
+création site web Yssingeaux ;
+développeur informatique Haute-Loire ;
+automatisation entreprise Haute-Loire ;
+automatiser Excel ;
+création macro Excel ;
+développement logiciel sur mesure Haute-Loire ;
+récupération automatique de données ;
+scraping de données ;
+création API ;
+développement base de données ;
+développeur SQL ;
+intelligence artificielle entreprise ;
+automatisation tâches répétitives.
+
+Ne jamais faire de bourrage de mots-clés.
+
+Les expressions importantes doivent apparaître naturellement dans :
+
+titres ;
+sous-titres ;
+paragraphes ;
+exemples ;
+FAQ ;
+balises title ;
+meta descriptions ;
+textes des liens internes.
+
+Chaque page doit avoir un sujet principal clairement identifiable par Google.
+
+Prévoir également un bon maillage interne entre les différentes pages.
+
+Par exemple, une page sur Excel peut renvoyer vers l’automatisation, une page sur le scraping peut renvoyer vers les bases de données, une page sur l’IA peut renvoyer vers l’automatisation, etc.
+
+Structure générale des pages
+
+Sans imposer précisément le design, chaque page de service doit idéalement contenir :
+
+un titre principal très clair ;
+une courte explication compréhensible immédiatement ;
+les problèmes que le service permet de résoudre ;
+beaucoup d’exemples concrets ;
+à quels types d’entreprises le service peut être utile ;
+ce que FR Informatique peut mettre en place ;
+les bénéfices pour le client ;
+quelques informations techniques secondaires si elles sont utiles ;
+une FAQ avec de vraies questions de prospects ;
+la zone d’intervention ;
+un appel clair à contacter FR Informatique.
+
+Le contenu doit rester humain, simple et accessible.
+
+L’objectif final du site est double :
+
+1. Permettre à une personne qui ne connaît presque rien à l’informatique de comprendre immédiatement ce que FR Informatique peut faire pour elle.
+
+2. Améliorer fortement le référencement naturel de FR Informatique afin d’apparaître sur davantage de recherches liées à la création de sites internet, l’automatisation, les logiciels sur mesure, Excel, les données, le scraping, les API et l’intelligence artificielle en Haute-Loire.
