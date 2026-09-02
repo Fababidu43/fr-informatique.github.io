@@ -1,4 +1,9 @@
 User-agent: *
-Disallow:
+Disallow: /PROMPT.TXT
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /gulpfile.js
+Disallow: /scripts/
+Disallow: /image_marque/
 
 Sitemap: https://fr-informatique.com/sitemap.xml

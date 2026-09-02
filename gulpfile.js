@@ -1,9 +1,16 @@
 const { src, dest, series, parallel } = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
+const htmlmin = require('gulp-html-minifier-terser');
 
 function minifyHTML() {
   return src(['*.html', '!index_test.html'])
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+      minifyCSS: true,
+      minifyJS: true
+    }))
     .pipe(dest('dist'));
 }
 
@@ -30,7 +37,7 @@ function copyOtherAssets() {
 }
 
 function copyStatic() {
-  return src(['robots.txt', 'sitemap.xml', 'CNAME', 'assets/img/favicon.png', 'assets/img/apple-touch-icon.png'], { base: './' })
+  return src(['robots.txt', 'sitemap.xml', 'CNAME', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-48x48.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png', 'site.webmanifest'], { base: './' })
     .pipe(dest('dist'));
 }
 

@@ -85,16 +85,6 @@ a {
   transform: translateY(0);
 }
 
-.grain {
-  position: fixed;
-  inset: 0;
-  z-index: 1200;
-  pointer-events: none;
-  opacity: 0.035;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
 .wrap {
   width: min(1180px, calc(100% - 40px));
   margin-inline: auto;
@@ -1441,7 +1431,6 @@ a {
 
 @media print {
   .site-header,
-  .grain,
   .scroll-top,
   .hero-note,
   .contact-form {
@@ -1514,10 +1503,6 @@ h5,
 
 .wrap {
   width: min(1180px, calc(100% - (2 * clamp(1.25rem, 4vw, 3rem))));
-}
-
-.grain {
-  display: none;
 }
 
 .eyebrow {
@@ -2667,8 +2652,8 @@ html {
 
 .profile-tag {
   position: absolute;
-  right: -14px;
-  bottom: -14px;
+  right: 14px;
+  bottom: 14px;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
   background: var(--copper-bright);
@@ -2676,6 +2661,7 @@ html {
   font-family: var(--f-mono);
   font-size: 0.72rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .about-page-grid .about-photo {
@@ -2723,15 +2709,6 @@ html {
   margin: 0;
   color: var(--slate);
 }
-
-.dark-zone {
-  border-color: var(--line-on-dark);
-  background: var(--ink-soft);
-  color: var(--paper);
-}
-
-.dark-zone p { color: rgba(245, 244, 251, 0.65); }
-.dark-zone .town-list li { border-color: var(--line-on-dark); color: var(--paper); }
 
 .light-cta {
   border-color: var(--line);
@@ -3167,8 +3144,6 @@ html {
 .zone-schematic .zone-ring { stroke: rgba(79, 214, 230, 0.48); stroke-width: 1.5; stroke-dasharray: 4 7; }
 .zone-schematic .zone-pulse { fill: var(--copper); filter: drop-shadow(0 0 8px rgba(106, 53, 201, 0.48)); }
 .zone-schematic .zone-nodes { fill: var(--patina); }
-.zone-schematic .zone-labels { fill: var(--slate); font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.04em; }
-.zone-schematic .zone-labels text:first-child { fill: var(--ink); font-size: 10px; font-weight: 600; text-anchor: middle; }
 
 .zone-visual .town-list { gap: 7px; }
 
@@ -3186,20 +3161,6 @@ html {
 
 .map-link:hover { color: var(--patina); transform: translateX(4px); }
 .zone-visual > small { color: var(--slate); font-size: 0.7rem; }
-
-.dark-zone .zone-schematic {
-  border-color: var(--line-on-dark);
-  background:
-    linear-gradient(90deg, rgba(79, 214, 230, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(157, 110, 240, 0.035) 1px, transparent 1px),
-    var(--ink);
-  background-size: 28px 28px;
-}
-
-.dark-zone .zone-schematic .zone-labels { fill: rgba(245, 244, 251, 0.54); }
-.dark-zone .zone-schematic .zone-labels text:first-child { fill: var(--paper); }
-.dark-zone .map-link { color: var(--patina-bright); }
-.dark-zone .zone-visual > small { color: rgba(245, 244, 251, 0.46); }
 
 .before-after-stage { cursor: grab; }
 .before-after input[type="range"] { cursor: grab; }

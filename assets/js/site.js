@@ -93,28 +93,40 @@
     });
   });
 
+  /* Éléments et longueur de tracé mis en cache une seule fois : ils ne changent jamais entre
+     deux défilements, inutile de les relire ou de recalculer la géométrie SVG à chaque scroll. */
+  var progressTop = document.querySelector(".progress-top");
+  var railProgress = document.querySelector(".signal-rail .progress");
+  var railLength = railProgress ? railProgress.getTotalLength() : 0;
+  var railItems = document.querySelectorAll(".signal-rail .node, .signal-rail .label");
+
   function updateScrollState() {
     var scrolled = window.scrollY > 24;
     if (header) header.classList.toggle("is-scrolled", scrolled);
     if (scrollTop) scrollTop.classList.toggle("show", window.scrollY > 550);
     var documentHeight = document.documentElement.scrollHeight - window.innerHeight;
     var progress = documentHeight > 0 ? Math.min(1, window.scrollY / documentHeight) : 0;
-    var progressTop = document.querySelector(".progress-top");
     if (progressTop) progressTop.style.width = (progress * 100) + "%";
-    var railProgress = document.querySelector(".signal-rail .progress");
     if (railProgress) {
-      var length = railProgress.getTotalLength();
-      railProgress.style.strokeDasharray = length;
-      railProgress.style.strokeDashoffset = length * (1 - progress);
+      railProgress.style.strokeDasharray = railLength;
+      railProgress.style.strokeDashoffset = railLength * (1 - progress);
     }
     var active = progress < 0.34 ? 0 : progress < 0.7 ? 1 : 2;
-    document.querySelectorAll(".signal-rail .node, .signal-rail .label").forEach(function (item, index) {
+    railItems.forEach(function (item, index) {
       item.classList.toggle("active", index % 3 === active);
     });
   }
 
   updateScrollState();
-  window.addEventListener("scroll", updateScrollState, { passive: true });
+  var scrollTicking = false;
+  window.addEventListener("scroll", function () {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(function () {
+      updateScrollState();
+      scrollTicking = false;
+    });
+  }, { passive: true });
 
   if (scrollTop) {
     scrollTop.addEventListener("click", function (event) {
@@ -208,9 +220,26 @@
     });
   }
 
+  /* Repousse un travail de mousemove au prochain rAF, pour ne jamais lire/écrire le DOM
+     plus souvent qu'une fois par image : les souris précises envoient bien plus d'événements
+     que d'images affichées, et cette limite évite de charger inutilement les machines modestes. */
+  function onMouseMoveThrottled(element, handler) {
+    var latestEvent = null;
+    var ticking = false;
+    element.addEventListener("mousemove", function (event) {
+      latestEvent = event;
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        handler(latestEvent);
+        ticking = false;
+      });
+    });
+  }
+
   /* Halo de signal dans le corps des pages uniquement : le footer reste parfaitement stable. */
   document.querySelectorAll("main .section:not(.contact-section)").forEach(function (section) {
-    section.addEventListener("mousemove", function (event) {
+    onMouseMoveThrottled(section, function (event) {
       var rect = section.getBoundingClientRect();
       section.style.setProperty("--mx", (event.clientX - rect.left) + "px");
       section.style.setProperty("--my", (event.clientY - rect.top) + "px");
@@ -220,7 +249,8 @@
   /* Boutons magnétiques et léger relief des cartes sur pointeur précis. */
   if (finePointer && !reduceMotion) {
     document.querySelectorAll(".btn-primary, .nav-cta").forEach(function (button) {
-      button.addEventListener("mousemove", function (event) {
+      button.style.willChange = "transform";
+      onMouseMoveThrottled(button, function (event) {
         var rect = button.getBoundingClientRect();
         var x = (event.clientX - rect.left - rect.width / 2) * 0.28;
         var y = (event.clientY - rect.top - rect.height / 2) * 0.28;
@@ -232,7 +262,8 @@
     });
 
     document.querySelectorAll(".service-card, .example-card, .benefit-card, .audience-card, .related-card, .project-card").forEach(function (card) {
-      card.addEventListener("mousemove", function (event) {
+      card.style.willChange = "transform";
+      onMouseMoveThrottled(card, function (event) {
         var rect = card.getBoundingClientRect();
         var px = (event.clientX - rect.left) / rect.width - 0.5;
         var py = (event.clientY - rect.top) / rect.height - 0.5;
