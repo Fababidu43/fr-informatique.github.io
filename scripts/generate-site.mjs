@@ -35,7 +35,7 @@ const services = [
     slug: "creation-site-internet-haute-loire.html",
     nav: "Sites vitrines",
     icon: "bi-window",
-    title: "Création de site internet vitrine sur mesure",
+    title: "Création de site internet sur mesure",
     meta: "Création de site internet vitrine sur mesure en Haute-Loire : Beauzac, Monistrol-sur-Loire, Yssingeaux et partout en France à distance.",
     eyebrow: "Votre entreprise visible en ligne",
     lead: "Vous n’avez pas encore de site, ou votre site actuel ne montre plus la qualité de votre travail ? Je crée un site vitrine clair, rapide et adapté à votre entreprise.",
@@ -71,7 +71,7 @@ const services = [
     slug: "hebergement-maintenance-site.html",
     nav: "Hébergement & maintenance",
     icon: "bi-cloud-check",
-    title: "Hébergement et maintenance de site internet",
+    title: "Hébergement et maintenance de site web",
     meta: "Hébergement, sauvegardes, maintenance et petites évolutions de sites vitrines pour entreprises de Haute-Loire et partout en France.",
     eyebrow: "Un site suivi après sa mise en ligne",
     lead: "Votre site doit rester accessible, rapide et à jour sans devenir une nouvelle tâche à gérer. Je peux m’occuper de son hébergement et de son suivi technique.",
@@ -111,7 +111,7 @@ const services = [
     slug: "automatisation-n8n.html",
     nav: "Automatisations n8n",
     icon: "bi-diagram-3",
-    title: "Automatisations n8n et scénarios sur mesure",
+    title: "Automatisations n8n sur mesure",
     meta: "Création de workflows n8n : relier des outils, déplacer des informations et déclencher des actions automatiquement pour votre entreprise.",
     eyebrow: "Faire circuler l’information",
     lead: "Vous recevez une information dans un outil puis devez la recopier dans un autre ? Un scénario automatique peut parfois enchaîner ces actions à votre place.",
@@ -131,7 +131,7 @@ const services = [
     slug: "collecte-donnees-web.html",
     nav: "Collecte de données web",
     icon: "bi-cloud-download",
-    title: "Collecte et récupération automatique de données",
+    title: "Collecte et récupération de données",
     meta: "Collecte et scraping de données : récupérer, nettoyer et exporter automatiquement des informations publiques vers Excel, CSV ou une base de données.",
     eyebrow: "Moins de copie depuis internet",
     lead: "Vous consultez régulièrement plusieurs pages pour recopier des tarifs, références ou informations ? Dans certains cas, ces données peuvent être récupérées, nettoyées et rangées automatiquement.",
@@ -152,7 +152,7 @@ const services = [
     slug: "logiciel-sur-mesure-haute-loire.html",
     nav: "Outils sur mesure",
     icon: "bi-tools",
-    title: "Logiciels et outils sur mesure pour TPE et artisans",
+    title: "Logiciels sur mesure pour TPE et artisans",
     meta: "Développement de petits logiciels et outils métier sur mesure pour artisans, TPE et PME en Haute-Loire ou à distance en France.",
     eyebrow: "Un outil adapté à votre manière de travailler",
     lead: "Vous avez une idée précise mais aucun logiciel existant ne correspond vraiment ? Un petit outil ciblé peut résoudre un problème sans devenir un projet énorme.",
@@ -172,7 +172,7 @@ const services = [
     slug: "api-integration.html",
     nav: "API & intégrations",
     icon: "bi-bezier2",
-    title: "Création d’API et connexion entre vos outils",
+    title: "Création d’API et connexion d’outils",
     meta: "Création d’API et intégration de services : faire échanger automatiquement des informations entre deux outils pour éviter la double saisie.",
     eyebrow: "Créer un pont entre deux logiciels",
     lead: "Deux outils que vous utilisez ne communiquent pas entre eux ? Il est parfois possible de créer un petit pont pour récupérer ou envoyer les informations automatiquement.",
@@ -192,7 +192,7 @@ const services = [
     slug: "bases-de-donnees-sql.html",
     nav: "Bases de données",
     icon: "bi-database",
-    title: "Bases de données et SQL pour votre entreprise",
+    title: "Bases de données et SQL en entreprise",
     meta: "Création et traitement de bases de données : regrouper, nettoyer, rechercher, importer et exporter vos informations en Haute-Loire.",
     eyebrow: "Retrouver enfin la bonne information",
     lead: "Vos clients, références ou historiques sont dispersés dans plusieurs fichiers ? Je peux vous aider à les regrouper, les nettoyer et les rendre plus faciles à rechercher.",
@@ -212,7 +212,7 @@ const services = [
     slug: "excel-vba-macros.html",
     nav: "Excel & macros",
     icon: "bi-file-earmark-spreadsheet",
-    title: "Automatiser Excel : macros et VBA sur mesure",
+    title: "Automatiser Excel avec macros VBA",
     meta: "Automatiser Excel, créer une macro VBA, un complément ou un bouton personnalisé pour traiter vos fichiers et gagner du temps.",
     eyebrow: "Faire en un clic ce que vous répétez chaque semaine",
     lead: "Vous ouvrez le même fichier, supprimez des colonnes, classez les lignes puis créez un nouvel export ? Ces manipulations peuvent souvent être regroupées derrière un bouton.",
@@ -482,7 +482,7 @@ function serviceCard(service) {
 }
 
 function homepage() {
-  const description = "Développeur informatique indépendant en Haute-Loire : sites vitrines sur mesure, automatisation, Excel, données, petits logiciels et IA pour TPE et artisans.";
+  const description = "Développeur informatique indépendant en Haute-Loire : sites vitrines, automatisation, Excel, données, logiciels et IA pour TPE et artisans.";
   const schema = [websiteSchema, { ...localBusiness, description, hasOfferCatalog: { "@type": "OfferCatalog", name: "Services pour entreprises", itemListElement: services.map((s) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: s.nav, url: `${domain}/${s.slug}` } })) } }];
   const primary = services.filter((s) => s.slug !== "depannage-informatique-beauzac.html");
   return `${head({ title: "Développeur informatique en Haute-Loire | FR Informatique", description, url: "index.html", schema })}<body data-page-act="0">${header("index.html")}<main id="contenu">
@@ -509,8 +509,8 @@ function standardSchema(name, description, slug, pageType = "WebPage") {
 
 function realisationsPage() {
   const slug = "realisations.html";
-  const description = "Découvrez les sites vitrines et refontes réalisés par FR Informatique pour des entreprises de Haute-Loire : Meca Europe, Jack Up Auto et Petiot Chaudronnerie.";
-  return `${head({ title: "Réalisations de sites vitrines en Haute-Loire", description, url: slug, schema: standardSchema("Réalisations FR Informatique", description, slug, "CollectionPage"), image: "meca-europe-new.webp", imageWidth: 1600, imageHeight: 791, imageAlt: "Comparaison avant et après de la refonte du site Meca Europe" })}<body data-page-act="2">${header(slug)}<main id="contenu">
+  const description = "Découvrez les sites vitrines réalisés par FR Informatique pour des entreprises de Haute-Loire : Meca Europe, Jack Up Auto, Petiot Chaudronnerie.";
+  return `${head({ title: "Réalisations de sites vitrines Haute-Loire", description, url: slug, schema: standardSchema("Réalisations FR Informatique", description, slug, "CollectionPage"), image: "meca-europe-new.webp", imageWidth: 1600, imageHeight: 791, imageAlt: "Comparaison avant et après de la refonte du site Meca Europe" })}<body data-page-act="2">${header(slug)}<main id="contenu">
   <section class="service-hero page-identity-hero"><div class="wrap"><ol class="breadcrumb"><li><a href="index.html">Accueil</a></li><li>Réalisations</li></ol><span class="eyebrow typewriter">Des projets locaux et utiles</span><h1>Des sites vitrines conçus autour d’un vrai métier.</h1><p class="service-lead">Une entreprise de mécanique générale, un garage et un artisan chaudronnier n’ont pas les mêmes clients ni les mêmes choses à montrer. Chaque site commence donc par l’activité réelle, pas par un modèle tout fait.</p><div class="hero-actions"><a class="btn btn-primary btn-glow decode" href="contact.html">Parler de mon projet</a><a class="btn btn-secondary" href="creation-site-internet-haute-loire.html">Comprendre l’offre</a></div></div>${themeVisual("creation-site-internet-haute-loire.html", "service-theme-visual")}</section>
   <section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow">Trois entreprises, trois réponses</span><h2>Le site doit ressembler à l’entreprise qu’il présente.</h2><p>Ces réalisations montrent une même exigence : expliquer rapidement le métier, rassurer le visiteur et rendre le contact évident sur téléphone comme sur ordinateur.</p></div><div class="showcase-list">
     <article class="showcase-project showcase-project-featured" id="meca-europe"><div class="before-after" data-before-after><div class="before-after-stage"><img class="after-image" src="assets/img/meca-europe-new.webp" width="1600" height="791" alt="Nouveau site internet réalisé pour Meca Europe"><div class="before-image"><img src="assets/img/meca-europe-old.webp" width="1440" height="980" alt="Ancien site internet de Meca Europe avant refonte"></div><span class="compare-label compare-label-before">Avant</span><span class="compare-label compare-label-after">Après</span><span class="compare-handle" aria-hidden="true"><i class="bi bi-chevron-left"></i><i class="bi bi-chevron-right"></i></span><input type="range" min="0" max="100" value="34" aria-label="Comparer l’ancienne et la nouvelle version du site Meca Europe"></div><p class="compare-help"><i class="bi bi-arrows"></i> Faites glisser pour comparer la refonte</p></div><div class="showcase-copy"><span class="eyebrow">Refonte complète · Riotord</span><h2>Meca Europe</h2><p>L’ancien site présentait l’essentiel, mais sa mise en page et sa navigation ne correspondaient plus aux usages actuels. La refonte donne davantage de place au métier, aux pièces réalisées et au parc machines.</p><ul class="deliver-list"><li>Nouvelle identité visuelle plus professionnelle</li><li>Navigation claire entre pièces de série, pièces unitaires et parc machines</li><li>Lecture adaptée au téléphone et accès direct à la demande de devis</li></ul><div class="project-links"><a class="btn btn-primary decode" href="https://meca-europe.fr/" target="_blank" rel="noopener noreferrer">Voir le nouveau site</a><a class="text-link" href="http://mecaeurope.free.fr/" target="_blank" rel="noopener noreferrer">Voir l’ancienne version</a></div></div></article>
