@@ -37,7 +37,7 @@ function copyOtherAssets() {
 }
 
 function copyStatic() {
-  return src(['robots.txt', 'sitemap.xml', 'CNAME', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-48x48.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png', 'site.webmanifest'], { base: './' })
+  return src(['robots.txt', 'sitemap.xml', 'CNAME', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-48x48.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png', 'site.webmanifest', 'eb69e13a4b76407db298fb00886a23a4.txt'], { base: './' })
     .pipe(dest('dist'));
 }
 
