@@ -1,7 +1,6 @@
 User-agent: *
 Disallow: /package.json
 Disallow: /package-lock.json
-Disallow: /gulpfile.js
 Disallow: /scripts/
 Disallow: /image_marque/
 

@@ -1,6 +1,5 @@
 # Dépendances et build
 node_modules/
-dist/
 .cache/
 
 # Logs

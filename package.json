@@ -4,20 +4,10 @@
   "scripts": {
     "generate": "node scripts/generate-site.mjs && node scripts/build-icon-subset.mjs",
     "check": "node scripts/validate-site.mjs",
-    "build": "npm run generate && gulp",
     "test": "npm run generate && npm run check"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "gulp": "^5.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-html-minifier-terser": "^7.1.0",
-    "gulp-uglify": "^3.0.2"
-  },
-  "overrides": {
-    "picomatch": "^2.3.2"
-  }
+  "description": ""
 }
