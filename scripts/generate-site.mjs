@@ -430,6 +430,8 @@ function head({ title, description, url, schema, image = "hero-bg.webp", imageWi
   const fullTitle = title.includes("FR Informatique") ? title : `${title} | FR Informatique`;
   const canonical = `${domain}/${url === "index.html" ? "" : url}`;
   const imageUrl = `${domain}/assets/img/${image}`;
+  const fontsUrl = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Space+Grotesk:wght@400;500;600;700&display=swap";
+  const iconsUrl = "assets/vendor/bootstrap-icons/bootstrap-icons.subset.css";
   return `<!doctype html><html lang="fr"><head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${fullTitle}</title><meta name="description" content="${description}"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta name="theme-color" content="#14163f"><meta name="author" content="Fabian Measson, FR Informatique">
@@ -437,8 +439,10 @@ function head({ title, description, url, schema, image = "hero-bg.webp", imageWi
   <meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="FR Informatique"><meta property="og:title" content="${fullTitle}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${imageUrl}"><meta property="og:image:width" content="${imageWidth}"><meta property="og:image:height" content="${imageHeight}"><meta property="og:image:alt" content="${imageAlt}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${fullTitle}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${imageUrl}"><meta name="twitter:image:alt" content="${imageAlt}">
   <link rel="icon" type="image/x-icon" href="favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"><link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css"><link rel="stylesheet" href="assets/css/site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="${fontsUrl}"><link rel="stylesheet" href="${fontsUrl}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="${fontsUrl}"></noscript>
+  <link rel="preload" as="style" href="${iconsUrl}"><link rel="stylesheet" href="${iconsUrl}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="${iconsUrl}"></noscript>
+  <link rel="stylesheet" href="assets/css/site.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JCKQWLBHGE"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JCKQWLBHGE');</script>
   <meta name="google-site-verification" content="google36ba2abbe09ba6bb.html">
   <script type="application/ld+json">${JSON.stringify(schema)}</script></head>`;

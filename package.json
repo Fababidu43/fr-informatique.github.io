@@ -2,7 +2,7 @@
   "name": "fr-informatique-site",
   "version": "1.0.0",
   "scripts": {
-    "generate": "node scripts/generate-site.mjs",
+    "generate": "node scripts/generate-site.mjs && node scripts/build-icon-subset.mjs",
     "check": "node scripts/validate-site.mjs",
     "build": "npm run generate && gulp",
     "test": "npm run generate && npm run check"
