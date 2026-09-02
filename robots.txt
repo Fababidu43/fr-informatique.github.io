@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /PROMPT.TXT
 Disallow: /package.json
 Disallow: /package-lock.json
 Disallow: /gulpfile.js
