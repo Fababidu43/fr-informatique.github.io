@@ -444,8 +444,8 @@ function head({ title, description, url, schema, image = "meca-europe-new.webp",
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="${fontsUrl}"><link rel="stylesheet" href="${fontsUrl}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="${fontsUrl}"></noscript>
   <link rel="preload" as="style" href="${iconsUrl}"><link rel="stylesheet" href="${iconsUrl}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="${iconsUrl}"></noscript>
-  <link rel="stylesheet" href="assets/css/site.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JCKQWLBHGE"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JCKQWLBHGE');</script>
+  <link rel="stylesheet" href="assets/css/site.min.css">
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JCKQWLBHGE');window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-JCKQWLBHGE';document.head.appendChild(s);});</script>
   <meta name="google-site-verification" content="google36ba2abbe09ba6bb.html">
   <script type="application/ld+json">${JSON.stringify(schema)}</script></head>`;
 }
@@ -499,7 +499,7 @@ function homepage() {
   <section class="section section-soft"><div class="narrow"><div class="section-head"><div><span class="eyebrow">Questions fréquentes</span><h2>Avant un premier échange</h2></div></div><div class="faq-list">${[
     ["Je ne sais pas de quelle technologie j’ai besoin. Est-ce un problème ?", "Pas du tout. Expliquez ce que vous faites aujourd’hui, ce qui prend du temps et le résultat souhaité. Le choix technique vient ensuite."], ["Travaillez-vous seulement avec les entreprises de Beauzac ?", "Non. Je privilégie la Haute-Loire et les communes dans un rayon d’environ 40 à 50 km, mais de nombreux projets peuvent être menés entièrement à distance partout en France."], ["Prenez-vous en charge de très gros projets informatiques ?", "Je me concentre sur des sites vitrines, automatisations et petits outils ciblés. Je ne me présente pas comme une agence capable de remplacer tout le système de gestion d’une entreprise."], ["Comment démarre un projet ?", "Par un échange simple et sans jargon. Vous pouvez montrer un fichier, décrire une tâche ou envoyer quelques exemples. Je vérifie ensuite la faisabilité et propose un périmètre clair."]
   ].map(([q,a]) => `<details><summary>${q}</summary><div class="faq-answer"><p>${a}</p></div></details>`).join("")}</div></div></section>
-  ${contactSection()}</main>${footer()}<script src="assets/js/site.js"></script></body></html>`;
+  ${contactSection()}</main>${footer()}<script src="assets/js/site.js" defer></script></body></html>`;
 }
 
 function standardSchema(name, description, slug, pageType = "WebPage") {
@@ -520,7 +520,7 @@ function realisationsPage() {
   <section class="section section-soft"><div class="wrap"><div class="section-head"><span class="eyebrow">Ce qui ne se voit pas au premier regard</span><h2>Un beau site doit surtout être agréable à utiliser.</h2><p>La présentation visuelle compte, mais elle sert toujours la compréhension, la rapidité et la prise de contact.</p></div><div class="benefit-grid"><article class="benefit-card"><i class="bi bi-phone"></i><h3>Lecture mobile</h3><p>Les textes, boutons et images restent confortables sur téléphone.</p></article><article class="benefit-card"><i class="bi bi-speedometer2"></i><h3>Chargement rapide</h3><p>Les éléments inutiles sont évités pour ne pas faire patienter le visiteur.</p></article><article class="benefit-card"><i class="bi bi-search"></i><h3>Structure compréhensible</h3><p>Les pages aident les visiteurs et Google à identifier les services.</p></article><article class="benefit-card"><i class="bi bi-person-check"></i><h3>Contact évident</h3><p>Le prospect sait toujours comment passer à l’étape suivante.</p></article></div></div></section>
   <section class="section"><div class="wrap two-col"><div><span class="eyebrow">Votre futur site</span><h2 class="content-title">Il n’a pas besoin d’être énorme pour être convaincant.</h2></div><div class="timeline"><div class="tl-step"><span class="tl-num">01 · ÉCOUTE</span><h3>Comprendre le métier</h3><p>Vos clients, vos prestations, votre zone et les questions les plus fréquentes.</p></div><div class="tl-step"><span class="tl-num">02 · CONTENU</span><h3>Organiser les réponses</h3><p>Une structure simple qui guide le prospect sans termes compliqués.</p></div><div class="tl-step"><span class="tl-num">03 · CRÉATION</span><h3>Donner une identité</h3><p>Une présentation sur mesure, cohérente avec votre entreprise.</p></div><div class="tl-step"><span class="tl-num">04 · MISE EN LIGNE</span><h3>Tester puis publier</h3><p>Vérification sur différents écrans avant de rendre le site public.</p></div></div></div></section>
   <section class="section section-soft"><div class="wrap"><div class="cta-panel"><div><span class="eyebrow">Une activité à présenter ?</span><h2>Parlons de ce que vos futurs clients doivent comprendre.</h2><p>Vous pouvez venir avec quelques photos, un ancien site ou simplement une explication de votre métier.</p></div><div class="cta-actions"><a class="btn btn-primary btn-glow decode" href="contact.html">Commencer le projet</a><a class="btn btn-secondary" href="tel:${phoneHref}">${phoneDisplay}</a></div></div></div></section>
-  </main>${footer()}<script src="assets/js/site.js"></script></body></html>`;
+  </main>${footer()}<script src="assets/js/site.js" defer></script></body></html>`;
 }
 
 function aboutPage() {
@@ -533,7 +533,7 @@ function aboutPage() {
   <section class="section"><div class="wrap two-col"><div><span class="eyebrow">Le bon périmètre</span><h2 class="content-title">Des projets ciblés, pas des promesses démesurées.</h2>${themeVisual("automatisation-n8n.html", "inline-theme-visual")}</div><div><h3>Les demandes adaptées</h3><ul class="deliver-list"><li>Site vitrine sur mesure</li><li>Automatisation d’une tâche répétitive</li><li>Petit outil interne ou traitement de fichiers</li><li>Macro Excel ou complément ciblé</li><li>Collecte et nettoyage de données autorisées</li><li>Connexion simple entre plusieurs outils</li></ul><h3 style="margin-top:2.5rem">Les projets qui demandent une autre organisation</h3><p class="section-intro">Un système complet couvrant toute l’entreprise, un logiciel industriel critique ou une transformation profonde d’un outil central nécessite généralement une équipe et un cadre différents.</p></div></div></section>
   <section class="section section-soft"><div class="wrap">${zoneNote()}</div></section>
   <section class="section"><div class="wrap"><div class="cta-panel light-cta"><div><span class="eyebrow">Faisons connaissance</span><h2>Expliquez-moi simplement ce que vous aimeriez améliorer.</h2><p>Un premier échange suffit souvent pour savoir si la piste est raisonnable.</p></div><div class="cta-actions"><a class="btn btn-primary btn-glow decode" href="contact.html">Écrire à FR Informatique</a><a class="btn btn-secondary" href="tel:${phoneHref}">${phoneDisplay}</a></div></div></div></section>
-  </main>${footer()}<script src="assets/js/site.js"></script></body></html>`;
+  </main>${footer()}<script src="assets/js/site.js" defer></script></body></html>`;
 }
 
 function contactPage() {
@@ -548,7 +548,7 @@ function contactPage() {
   <section class="section section-soft"><div class="wrap"><div class="section-head"><span class="eyebrow">Pour aller plus vite</span><h2>Quelques éléments peuvent aider, s’ils sont faciles à partager.</h2></div><div class="example-grid"><article class="example-card"><span class="num">01</span><h3>Un exemple réel</h3><p>Un fichier anonymisé, une capture ou un document proche de ce que vous traitez.</p></article><article class="example-card"><span class="num">02</span><h3>La fréquence</h3><p>Chaque jour, chaque semaine ou seulement à certaines périodes.</p></article><article class="example-card"><span class="num">03</span><h3>Le résultat souhaité</h3><p>Le fichier, le message ou l’écran que vous aimeriez obtenir à la fin.</p></article></div></div></section>
   <section class="section"><div class="wrap">${zoneNote()}</div></section>
   <section class="section section-soft"><div class="narrow"><div class="section-head"><span class="eyebrow">Avant de contacter</span><h2>Questions fréquentes</h2></div><div class="faq-list">${faq.map(([q,a]) => `<details><summary>${q}</summary><div class="faq-answer"><p>${a}</p></div></details>`).join("")}</div></div></section>
-  </main>${footer()}<script src="assets/js/site.js"></script></body></html>`;
+  </main>${footer()}<script src="assets/js/site.js" defer></script></body></html>`;
 }
 
 function leadBlock(service, soft) {
@@ -632,7 +632,7 @@ function mentionsLegalesPage() {
   <p>Le présent site et les présentes mentions légales sont soumis au droit français. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.</p>
   </div></section>
   <section class="section section-soft"><div class="wrap"><div class="cta-panel"><div><span class="eyebrow">Une question sur ces informations ?</span><h2>Contactez FR Informatique directement.</h2></div><div class="cta-actions"><a class="btn btn-primary btn-glow decode" href="contact.html">Contacter</a><a class="btn btn-secondary" href="tel:${phoneHref}">${phoneDisplay}</a></div></div></div></section>
-  </main>${footer()}<script src="assets/js/site.js"></script></body></html>`;
+  </main>${footer()}<script src="assets/js/site.js" defer></script></body></html>`;
 }
 
 function politiqueConfidentialitePage() {
@@ -662,7 +662,7 @@ function politiqueConfidentialitePage() {
   <p>Ce site est servi en HTTPS et ne stocke aucune donnée personnelle en base de données propre : les échanges transitent directement vers les prestataires mentionnés ci-dessus.</p>
   </div></section>
   <section class="section section-soft"><div class="wrap">${zoneNote()}</div></section>
-  </main>${footer()}<script src="assets/js/site.js"></script></body></html>`;
+  </main>${footer()}<script src="assets/js/site.js" defer></script></body></html>`;
 }
 
 function notFoundPage() {
@@ -672,7 +672,7 @@ function notFoundPage() {
   <section class="service-hero page-identity-hero"><div class="wrap"><span class="eyebrow typewriter">Erreur 404</span><h1>Cette page n’existe pas ou plus.</h1><p class="service-lead">Le lien suivi est peut-être ancien ou mal orthographié. Vous retrouverez ci-dessous l’ensemble des services, ainsi qu’un accès direct à l’accueil et au contact.</p><div class="hero-actions"><a class="btn btn-primary btn-glow decode" href="index.html">Retour à l’accueil</a><a class="btn btn-secondary" href="contact.html">Contacter FR Informatique</a></div></div>${themeVisual("depannage-informatique-beauzac.html", "service-theme-visual")}</section>
   <section class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Services</span><h2>Vous cherchiez peut-être l’une de ces pages ?</h2></div><p>Sites vitrines, automatisation, Excel, données, logiciels sur mesure ou dépannage local : voici l’ensemble des services proposés par FR Informatique.</p></div><div class="service-grid">${services.map(serviceCard).join("")}</div></div></section>
   <section class="section section-soft"><div class="wrap">${zoneNote()}</div></section>
-  </main>${footer()}<script src="assets/js/site.js"></script></body></html>`;
+  </main>${footer()}<script src="assets/js/site.js" defer></script></body></html>`;
 }
 
 function servicePage(service) {
@@ -712,7 +712,7 @@ function servicePage(service) {
   <div class="wrap service-summary"><div class="summary-item"><strong>Pour qui ?</strong><span>Artisans, indépendants, garages, TPE et PME</span></div><div class="summary-item"><strong>Zone locale</strong><span>40 à 50 km autour de Beauzac</span></div><div class="summary-item"><strong>À distance</strong><span>Projets réalisables partout en France</span></div></div>
   ${body}
   <section class="section section-soft"><div class="wrap"><div class="cta-panel"><div><span class="eyebrow">Une question, une tâche ou une idée ?</span><h2>Montrez-moi simplement ce qui vous fait perdre du temps.</h2><p>Un premier échange permet de vérifier si une solution réaliste existe, sans vous demander de parler technique.</p></div><div class="cta-actions"><a class="btn btn-primary btn-glow decode" href="#contact">Décrire mon besoin</a><a class="btn btn-secondary" href="tel:${phoneHref}">${phoneDisplay}</a></div></div></div></section>
-  ${contactSection()}</main>${footer()}<script src="assets/js/site.js"></script></body></html>`;
+  ${contactSection()}</main>${footer()}<script src="assets/js/site.js" defer></script></body></html>`;
 }
 
 fs.writeFileSync(path.join(root, "index.html"), homepage(), "utf8");

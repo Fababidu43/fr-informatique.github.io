@@ -2,12 +2,16 @@
   "name": "fr-informatique-site",
   "version": "1.0.0",
   "scripts": {
-    "generate": "node scripts/generate-site.mjs && node scripts/build-icon-subset.mjs",
+    "generate": "node scripts/generate-site.mjs && node scripts/build-icon-subset.mjs && node scripts/minify-css.mjs",
     "check": "node scripts/validate-site.mjs",
     "test": "npm run generate && npm run check"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "subset-font": "^2.7.0"
+  }
 }

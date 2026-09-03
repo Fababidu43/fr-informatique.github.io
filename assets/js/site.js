@@ -372,8 +372,13 @@
   }, { passive: true });
   updateParallax();
 
-  /* Points lumineux qui circulent sur les circuits (hero d’accueil et schémas « Le principe en un coup d’œil »). */
+  /* Points lumineux qui circulent sur les circuits (hero d’accueil et schémas « Le principe en un coup d’œil »).
+     Toutes les lectures de géométrie (getPointAtLength) sont regroupées avant les écritures DOM,
+     pour ne jamais lire une position juste après l'avoir invalidée par une écriture précédente
+     (ce qui forçait un reflow synchrone à chaque image). Les circuits hors écran sont aussi mis
+     en pause via IntersectionObserver : invisibles, ils n'ont aucune raison de consommer du CPU. */
   if (!reduceMotion) {
+    var circuitGroups = [];
     document.querySelectorAll(".circuit-pulses").forEach(function (layer) {
       var circuit = layer.closest("svg");
       if (!circuit) return;
@@ -386,18 +391,43 @@
         layer.appendChild(dot);
         return { path: path, length: path.getTotalLength(), dot: dot, offset: index / paths.length, speed: 0.0002 + index * 0.000035 };
       });
-      var animateCircuit = function (time) {
-        pulses.forEach(function (pulse) {
-          var p = (time * pulse.speed + pulse.offset) % 1;
-          var point = pulse.path.getPointAtLength(p * pulse.length);
-          pulse.dot.setAttribute("cx", point.x);
-          pulse.dot.setAttribute("cy", point.y);
-          pulse.dot.style.opacity = 0.35 + Math.sin(p * Math.PI) * 0.65;
-        });
-        window.requestAnimationFrame(animateCircuit);
-      };
-      window.requestAnimationFrame(animateCircuit);
+      circuitGroups.push({ circuit: circuit, pulses: pulses, active: true });
     });
+
+    if (circuitGroups.length) {
+      if ("IntersectionObserver" in window) {
+        var circuitMap = new Map(circuitGroups.map(function (group) { return [group.circuit, group]; }));
+        var circuitObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            var group = circuitMap.get(entry.target);
+            if (group) group.active = entry.isIntersecting;
+          });
+        }, { rootMargin: "20% 0px" });
+        circuitGroups.forEach(function (group) {
+          group.active = false;
+          circuitObserver.observe(group.circuit);
+        });
+      }
+
+      var animateCircuits = function (time) {
+        var updates = [];
+        circuitGroups.forEach(function (group) {
+          if (!group.active) return;
+          group.pulses.forEach(function (pulse) {
+            var p = (time * pulse.speed + pulse.offset) % 1;
+            var point = pulse.path.getPointAtLength(p * pulse.length);
+            updates.push({ dot: pulse.dot, x: point.x, y: point.y, p: p });
+          });
+        });
+        updates.forEach(function (item) {
+          item.dot.setAttribute("cx", item.x);
+          item.dot.setAttribute("cy", item.y);
+          item.dot.style.opacity = 0.35 + Math.sin(item.p * Math.PI) * 0.65;
+        });
+        window.requestAnimationFrame(animateCircuits);
+      };
+      window.requestAnimationFrame(animateCircuits);
+    }
   }
 
   document.querySelectorAll(".contact-form").forEach(function (form) {
